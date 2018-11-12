@@ -17,6 +17,7 @@ namespace TestAnime
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            ////Con vi bánh bèo
         }
     }
 }
