@@ -18,6 +18,7 @@ namespace VIEW_USECASE
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new GIAODIENCHINH());
             /// code của Chiều Chiều
+            Application.Run(new GDChinhGiaoVu());
         }
     }
 }
