@@ -16,7 +16,7 @@ namespace VIEW_USECASE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GIAODIENCHINH());
+            Application.Run(new GDChinhGiaoVu());
         }
     }
 }

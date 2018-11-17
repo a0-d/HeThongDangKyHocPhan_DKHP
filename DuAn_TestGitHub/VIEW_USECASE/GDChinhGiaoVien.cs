@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace VIEW_USECASE
 {
-    public partial class GIAODIENCHINH : Form
+    public partial class GDChinhGiaoVien : Form
     {
-        public GIAODIENCHINH()
+        public GDChinhGiaoVien()
         {
             InitializeComponent();
-        }
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
