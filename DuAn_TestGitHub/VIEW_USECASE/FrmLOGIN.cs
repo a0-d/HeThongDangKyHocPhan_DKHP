@@ -1,5 +1,4 @@
-﻿using MetroFramework.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,24 @@ using System.Windows.Forms;
 
 namespace VIEW_USECASE
 {
-    public partial class FrmLOGIN : MetroForm
+    public partial class FrmLOGIN : Form
     {
         public FrmLOGIN()
         {
             InitializeComponent();
         }
 
-        private void buttonDangNhap_Click(object sender, EventArgs e)
+       
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn đã đăng nhập", "Thông báo");
+            GDChinhGiaoVien a = new GDChinhGiaoVien();
+            a.ShowDialog();
+        }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
