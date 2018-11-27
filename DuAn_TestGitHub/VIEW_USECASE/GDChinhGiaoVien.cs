@@ -13,6 +13,8 @@ namespace VIEW_USECASE
 {
     public partial class GDChinhGiaoVien : Form
     {
+        string IDChuyenDe = "";
+
         public GDChinhGiaoVien()
         {
             InitializeComponent();
@@ -38,11 +40,10 @@ namespace VIEW_USECASE
             TT orders1 = new TT();
             DataTable dt = orders1.LayDSChuyeDeDuocMo();
 
-            dataGridViewChuyenDe.DataSource = dt; 
-
+            dataGridViewChuyenDe.DataSource = dt;        
         }
-        
-        private void button13_Click(object sender, EventArgs e)
+
+    private void button13_Click(object sender, EventArgs e)
         {
             panelChinh.Visible = false;
 
@@ -285,11 +286,15 @@ namespace VIEW_USECASE
             panelChinh.Visible = false;
 
         }
-
-        private void gbxCapNhatDead_Enter(object sender, EventArgs e)
+        private void dataGridViewChuyenDe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            LoadText();
         }
+        private void LoadText()
+        {
+            IDChuyenDe = dataGridViewChuyenDe.CurrentRow.Cells["macd"].Value.ToString();
+        }
+
 
         private void btnCapNhatDead_Click(object sender, EventArgs e)
         {
@@ -425,7 +430,7 @@ namespace VIEW_USECASE
         private void ComboxLop_Load(object sender, EventArgs e)
         {
             TT orders = new TT();
-            DataTable dt = orders.LopCombobox();
+            DataTable dt = orders.LopCombobox(IDChuyenDe);
 
             dt.Columns.Add("malop", typeof(string));
             dt.Dispose();
@@ -436,5 +441,31 @@ namespace VIEW_USECASE
 
         }
 
+        private void txtMaDeadThem_Load(object sender, EventArgs e)
+        {
+            TT max = new TT();
+            int x = max.GetMaxOrderIDDEAD();
+            x++;
+            txtMaDeadThem.Text = Convert.ToString(x);
+        }
+
+        private void btnCapNhatThemDead_Click(object sender, EventArgs e)
+        {
+            string malop = cbChonLopThemDead.Text;
+            int id = Convert.ToInt32(txtMaDeadThem.Text);
+            string tendead = txtTenDeadThem.Text;
+            DateTime thoihanThemDead = Convert.ToDateTime(dtDeadThem.Text);
+
+            if (malop == "" || tendead == "")
+            {
+                MessageBox.Show("Bạn chưa nhập đủ thông tin!");
+            }
+            else
+            {
+                TT addDead = new TT();
+                addDead.InsertDead(malop, id, tendead, thoihanThemDead);
+                MessageBox.Show("Đã Thêm Deadline thành công!");
+            }
+        }
     }
 }
