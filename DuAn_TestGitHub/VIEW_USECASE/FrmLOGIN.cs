@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace VIEW_USECASE
 {
-    public partial class FrmLOGIN : Form
+    public partial class FrmLOGIN : MetroForm
     {
         public FrmLOGIN()
         {
