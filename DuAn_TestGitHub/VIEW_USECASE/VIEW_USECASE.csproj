@@ -32,8 +32,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>D:\study\PTUDCSDL\ĐỒ ÁN\metroframework-modern-ui-master\metroframework-modern-ui-master\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>D:\study\PTUDCSDL\ĐỒ ÁN\metroframework-modern-ui-master\metroframework-modern-ui-master\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>D:\study\PTUDCSDL\ĐỒ ÁN\metroframework-modern-ui-master\metroframework-modern-ui-master\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +60,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.UI, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FrmLOGIN.cs">
@@ -74,19 +94,21 @@
     <EmbeddedResource Include="GDChinhGiaoVu.resx">
       <DependentUpon>GDChinhGiaoVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -95,6 +117,111 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rombre__orange_shop_preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ramdisk_crop_185993113_ox2i.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ramdisk_crop_185993319_Rypad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cjdowner-Cryptocurrency-Flat-Achain-ACT.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inipagi-Job-Seeker-Hierarchy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ramdisk_crop_186015015_2DsX.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ramdisk_crop_186026022_7VDVEtb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ramdisk_crop_186026257_wDnrd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pocket-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-1-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checklist-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gradient_builder_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f808209c701624df11b0acab70642c98.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-47226175-blue-green-wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-47226175-blue-green-wallpaper1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saraille_Aqua_wp.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turquoise2lilac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saraille_Aqua_wp1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9ba3a3e91eccdc8dc73e67c0a7c60f27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turquoise2lilac1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saraille_Aqua_wp2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\target-market-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pen-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\certificate-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-analysis-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-contact-folded-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
