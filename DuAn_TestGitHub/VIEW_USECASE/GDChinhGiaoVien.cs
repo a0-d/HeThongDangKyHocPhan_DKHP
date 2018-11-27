@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,16 @@ namespace VIEW_USECASE
             panelTraCuuTTDK.Visible = false;
             panelChinh.Visible = true;
         }
+        private void GDChinhGiaoVien_Load_1(object sender, EventArgs e)
+        {
+            //ComboxLop_Load(sender, e);
+            TT orders1 = new TT();
+            DataTable dt = orders1.LayDSChuyeDeDuocMo();
 
+            dataGridViewChuyenDe.DataSource = dt; 
+
+        }
+        
         private void button13_Click(object sender, EventArgs e)
         {
             panelChinh.Visible = false;
@@ -226,10 +236,7 @@ namespace VIEW_USECASE
 
         }
 
-        private void GDChinhGiaoVien_Load_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void panel_CapNhatSLLop_Paint(object sender, PaintEventArgs e)
         {
@@ -326,7 +333,7 @@ namespace VIEW_USECASE
 
         }
 
-   
+
         private void button4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Bạn đã đăng xuất!");
@@ -415,5 +422,19 @@ namespace VIEW_USECASE
             panelTraCuuTTDK.Visible = false;
             panelChinh.Visible = true;
         }
+        private void ComboxLop_Load(object sender, EventArgs e)
+        {
+            TT orders = new TT();
+            DataTable dt = orders.LopCombobox();
+
+            dt.Columns.Add("malop", typeof(string));
+            dt.Dispose();
+            cbLopCapNhatDead.ValueMember = "malop";
+            cbChonLopThemDead.ValueMember = "malop";
+            cbLopCapNhatDead.DataSource = dt;
+            cbChonLopThemDead.DataSource = dt;
+
+        }
+
     }
 }

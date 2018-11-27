@@ -104,6 +104,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.dataGridViewTraCuuDiem = new System.Windows.Forms.DataGridView();
             this.gbxThemDead = new System.Windows.Forms.GroupBox();
+            this.cbChonLopThemDead = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.txtMaDeadThem = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtTenDeadThem = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -112,7 +113,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.cbChonLopThemDead = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.gbxCapNhatSLSV = new System.Windows.Forms.GroupBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -134,8 +134,10 @@
             this.panel_CapNhatDead = new System.Windows.Forms.Panel();
             this.gbxCapNhatDead = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtTenDead = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cbMaDead = new System.Windows.Forms.ComboBox();
             this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.btnUpdateDead = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -152,9 +154,9 @@
             this.label40 = new System.Windows.Forms.Label();
             this.dataGridViewTraCuuTTDK = new System.Windows.Forms.DataGridView();
             this.panelChinh = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.dataGridViewChuyenDe = new System.Windows.Forms.DataGridView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtTenDead = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panelFunction.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -1065,9 +1067,9 @@
             // gbxThemDead
             // 
             this.gbxThemDead.BackColor = System.Drawing.Color.White;
+            this.gbxThemDead.Controls.Add(this.cbChonLopThemDead);
             this.gbxThemDead.Controls.Add(this.groupBox6);
             this.gbxThemDead.Controls.Add(this.bunifuThinButton22);
-            this.gbxThemDead.Controls.Add(this.cbChonLopThemDead);
             this.gbxThemDead.Controls.Add(this.label24);
             this.gbxThemDead.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxThemDead.ForeColor = System.Drawing.Color.DarkCyan;
@@ -1078,6 +1080,15 @@
             this.gbxThemDead.TabStop = false;
             this.gbxThemDead.Text = "Thêm deadline";
             this.gbxThemDead.Visible = false;
+            // 
+            // cbChonLopThemDead
+            // 
+            this.cbChonLopThemDead.FormattingEnabled = true;
+            this.cbChonLopThemDead.Location = new System.Drawing.Point(333, 158);
+            this.cbChonLopThemDead.Name = "cbChonLopThemDead";
+            this.cbChonLopThemDead.Size = new System.Drawing.Size(140, 39);
+            this.cbChonLopThemDead.TabIndex = 29;
+            this.cbChonLopThemDead.DropDown += new System.EventHandler(this.ComboxLop_Load);
             // 
             // groupBox6
             // 
@@ -1197,15 +1208,6 @@
             this.bunifuThinButton22.Size = new System.Drawing.Size(181, 41);
             this.bunifuThinButton22.TabIndex = 3;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cbChonLopThemDead
-            // 
-            this.cbChonLopThemDead.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbChonLopThemDead.FormattingEnabled = true;
-            this.cbChonLopThemDead.Location = new System.Drawing.Point(331, 156);
-            this.cbChonLopThemDead.Name = "cbChonLopThemDead";
-            this.cbChonLopThemDead.Size = new System.Drawing.Size(146, 33);
-            this.cbChonLopThemDead.TabIndex = 2;
             // 
             // label24
             // 
@@ -1489,6 +1491,23 @@
             this.groupBox7.TabIndex = 17;
             this.groupBox7.TabStop = false;
             // 
+            // txtTenDead
+            // 
+            this.txtTenDead.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtTenDead.BorderColorIdle = System.Drawing.Color.DarkCyan;
+            this.txtTenDead.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtTenDead.BorderThickness = 3;
+            this.txtTenDead.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenDead.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtTenDead.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTenDead.isPassword = false;
+            this.txtTenDead.Location = new System.Drawing.Point(186, 72);
+            this.txtTenDead.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenDead.Name = "txtTenDead";
+            this.txtTenDead.Size = new System.Drawing.Size(375, 44);
+            this.txtTenDead.TabIndex = 10;
+            this.txtTenDead.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // cbMaDead
             // 
             this.cbMaDead.FormattingEnabled = true;
@@ -1510,6 +1529,16 @@
             this.bunifuDatepicker1.Size = new System.Drawing.Size(376, 37);
             this.bunifuDatepicker1.TabIndex = 8;
             this.bunifuDatepicker1.Value = new System.DateTime(2018, 11, 19, 14, 18, 29, 464);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(22, 40);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(128, 25);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Mã Deadline:";
             // 
             // label17
             // 
@@ -1564,6 +1593,7 @@
             this.cbLopCapNhatDead.Name = "cbLopCapNhatDead";
             this.cbLopCapNhatDead.Size = new System.Drawing.Size(146, 33);
             this.cbLopCapNhatDead.TabIndex = 13;
+            this.cbLopCapNhatDead.DropDown += new System.EventHandler(this.ComboxLop_Load);
             // 
             // label20
             // 
@@ -1690,46 +1720,38 @@
             // 
             // panelChinh
             // 
+            this.panelChinh.Controls.Add(this.button1);
+            this.panelChinh.Controls.Add(this.textBox5);
             this.panelChinh.Controls.Add(this.dataGridViewChuyenDe);
             this.panelChinh.Location = new System.Drawing.Point(0, 256);
             this.panelChinh.Name = "panelChinh";
             this.panelChinh.Size = new System.Drawing.Size(1325, 477);
             this.panelChinh.TabIndex = 2;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(540, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Tìm Kiếm";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(29, 8);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(448, 38);
+            this.textBox5.TabIndex = 1;
+            // 
             // dataGridViewChuyenDe
             // 
             this.dataGridViewChuyenDe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewChuyenDe.Location = new System.Drawing.Point(-2, 3);
+            this.dataGridViewChuyenDe.Location = new System.Drawing.Point(-2, 57);
             this.dataGridViewChuyenDe.Name = "dataGridViewChuyenDe";
-            this.dataGridViewChuyenDe.Size = new System.Drawing.Size(1327, 479);
+            this.dataGridViewChuyenDe.Size = new System.Drawing.Size(1327, 425);
             this.dataGridViewChuyenDe.TabIndex = 0;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(22, 40);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(128, 25);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Mã Deadline:";
-            // 
-            // txtTenDead
-            // 
-            this.txtTenDead.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtTenDead.BorderColorIdle = System.Drawing.Color.DarkCyan;
-            this.txtTenDead.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtTenDead.BorderThickness = 3;
-            this.txtTenDead.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenDead.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtTenDead.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTenDead.isPassword = false;
-            this.txtTenDead.Location = new System.Drawing.Point(186, 72);
-            this.txtTenDead.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenDead.Name = "txtTenDead";
-            this.txtTenDead.Size = new System.Drawing.Size(375, 44);
-            this.txtTenDead.TabIndex = 10;
-            this.txtTenDead.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // GDChinhGiaoVien
             // 
@@ -1737,8 +1759,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1325, 733);
-            this.Controls.Add(this.panel_CapNhatDead);
             this.Controls.Add(this.panelThemDead);
+
+            this.Controls.Add(this.panel_CapNhatDead);
             this.Controls.Add(this.panelChinh);
             this.Controls.Add(this.panel_TraCuuDiem);
             this.Controls.Add(this.panelTraCuuTTDK);
@@ -1793,6 +1816,7 @@
             this.panelTraCuuTTDK.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTraCuuTTDK)).EndInit();
             this.panelChinh.ResumeLayout(false);
+            this.panelChinh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChuyenDe)).EndInit();
             this.ResumeLayout(false);
 
@@ -1874,7 +1898,6 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtSLSVCNLop;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Button button_QT_LuuChinhSua;
-        private System.Windows.Forms.ComboBox cbChonLopThemDead;
         private System.Windows.Forms.Label label24;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
@@ -1926,6 +1949,9 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtMaDeadThem;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtTenDead;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox cbChonLopThemDead;
     }
 }
 
