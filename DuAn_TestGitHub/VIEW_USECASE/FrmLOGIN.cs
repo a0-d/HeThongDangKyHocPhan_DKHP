@@ -18,17 +18,9 @@ namespace VIEW_USECASE
             InitializeComponent();
         }
 
-       
-
-        private void btnDangNhap_Click(object sender, EventArgs e)
+        private void buttonDangNhap_Click(object sender, EventArgs e)
         {
-            GDChinhGiaoVien a = new GDChinhGiaoVien();
-            a.ShowDialog();
-        }
-
-        private void bunifuTileButton1_Click(object sender, EventArgs e)
-        {
-            Close();
+            MessageBox.Show("Bạn đã đăng nhập", "Thông báo");
         }
     }
 }

@@ -74,7 +74,6 @@
             this.buttonDiem = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button_QT_LuuChinhSua = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tb_QT_Email = new System.Windows.Forms.TextBox();
             this.tb_QT_TenChuTK = new System.Windows.Forms.TextBox();
@@ -86,6 +85,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button_QT_DoiMatKhau = new System.Windows.Forms.Button();
+            this.button_QT_LuuChinhSua = new System.Windows.Forms.Button();
             this.button_QT_ChinhSua = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBoxThemChuyenDe = new System.Windows.Forms.GroupBox();
@@ -211,16 +211,16 @@
             this.label71 = new System.Windows.Forms.Label();
             this.dataGridViewTraCuu = new System.Windows.Forms.DataGridView();
             this.panelQT = new System.Windows.Forms.Panel();
+            this.labelMKC = new System.Windows.Forms.Label();
+            this.tb_QT_MKC = new System.Windows.Forms.TextBox();
+            this.labelMKM = new System.Windows.Forms.Label();
+            this.tb_QT_MKM = new System.Windows.Forms.TextBox();
+            this.labelXNMKM = new System.Windows.Forms.Label();
+            this.tb_QT_XNMKM = new System.Windows.Forms.TextBox();
+            this.buttonDoiMatKhau = new System.Windows.Forms.Button();
+            this.labelNOTE3 = new System.Windows.Forms.Label();
             this.labelNOTE1 = new System.Windows.Forms.Label();
             this.labelNOTE2 = new System.Windows.Forms.Label();
-            this.labelNOTE3 = new System.Windows.Forms.Label();
-            this.buttonDoiMatKhau = new System.Windows.Forms.Button();
-            this.tb_QT_XNMKM = new System.Windows.Forms.TextBox();
-            this.labelXNMKM = new System.Windows.Forms.Label();
-            this.tb_QT_MKM = new System.Windows.Forms.TextBox();
-            this.labelMKM = new System.Windows.Forms.Label();
-            this.tb_QT_MKC = new System.Windows.Forms.TextBox();
-            this.labelMKC = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             this.panelFunction.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -432,7 +432,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1171, 193);
+            this.tabPage2.Size = new System.Drawing.Size(1171, 174);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tra Cứu";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -741,7 +741,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1171, 193);
+            this.tabPage3.Size = new System.Drawing.Size(1171, 174);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Quản trị";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -766,17 +766,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Thông tin";
             this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
-            // 
-            // button_QT_LuuChinhSua
-            // 
-            this.button_QT_LuuChinhSua.Enabled = false;
-            this.button_QT_LuuChinhSua.Location = new System.Drawing.Point(776, 28);
-            this.button_QT_LuuChinhSua.Name = "button_QT_LuuChinhSua";
-            this.button_QT_LuuChinhSua.Size = new System.Drawing.Size(126, 44);
-            this.button_QT_LuuChinhSua.TabIndex = 0;
-            this.button_QT_LuuChinhSua.Text = "Lưu chỉnh sửa";
-            this.button_QT_LuuChinhSua.UseVisualStyleBackColor = true;
-            this.button_QT_LuuChinhSua.Click += new System.EventHandler(this.button_QT_LuuChinhSua_Click);
             // 
             // label4
             // 
@@ -842,7 +831,6 @@
             this.tb_QT_TenTK.ReadOnly = true;
             this.tb_QT_TenTK.Size = new System.Drawing.Size(176, 26);
             this.tb_QT_TenTK.TabIndex = 1;
-            this.tb_QT_TenTK.TextChanged += new System.EventHandler(this.tb_QT_TenTK_TextChanged);
             // 
             // label2
             // 
@@ -884,6 +872,17 @@
             this.button_QT_DoiMatKhau.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button_QT_DoiMatKhau.UseVisualStyleBackColor = true;
             this.button_QT_DoiMatKhau.Click += new System.EventHandler(this.button_QT_DoiMatKhau_Click);
+            // 
+            // button_QT_LuuChinhSua
+            // 
+            this.button_QT_LuuChinhSua.Enabled = false;
+            this.button_QT_LuuChinhSua.Location = new System.Drawing.Point(776, 28);
+            this.button_QT_LuuChinhSua.Name = "button_QT_LuuChinhSua";
+            this.button_QT_LuuChinhSua.Size = new System.Drawing.Size(126, 44);
+            this.button_QT_LuuChinhSua.TabIndex = 0;
+            this.button_QT_LuuChinhSua.Text = "Lưu chỉnh sửa";
+            this.button_QT_LuuChinhSua.UseVisualStyleBackColor = true;
+            this.button_QT_LuuChinhSua.Click += new System.EventHandler(this.button_QT_LuuChinhSua_Click);
             // 
             // button_QT_ChinhSua
             // 
@@ -2065,8 +2064,6 @@
             // groupBoxCapNhatGiaoVienPhuTrachChuyenDe
             // 
             this.groupBoxCapNhatGiaoVienPhuTrachChuyenDe.BackColor = System.Drawing.Color.Honeydew;
-            this.groupBoxCapNhatGiaoVienPhuTrachChuyenDe.Controls.Add(this.dataGridViewTraCuu);
-            this.groupBoxCapNhatGiaoVienPhuTrachChuyenDe.Controls.Add(this.panelQT);
             this.groupBoxCapNhatGiaoVienPhuTrachChuyenDe.Controls.Add(this.cbb_CapNhatGVPhuTrach_ThuocNganh);
             this.groupBoxCapNhatGiaoVienPhuTrachChuyenDe.Controls.Add(this.cbb_CapNhatGVPhuTrach_Lop);
             this.groupBoxCapNhatGiaoVienPhuTrachChuyenDe.Controls.Add(this.cbb_CapNhatGVPhuTrach_HocKi);
@@ -2256,7 +2253,7 @@
             // dataGridViewTraCuu
             // 
             this.dataGridViewTraCuu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTraCuu.Location = new System.Drawing.Point(2, 0);
+            this.dataGridViewTraCuu.Location = new System.Drawing.Point(2, 212);
             this.dataGridViewTraCuu.Name = "dataGridViewTraCuu";
             this.dataGridViewTraCuu.Size = new System.Drawing.Size(1321, 517);
             this.dataGridViewTraCuu.TabIndex = 12;
@@ -2275,50 +2272,74 @@
             this.panelQT.Controls.Add(this.labelMKM);
             this.panelQT.Controls.Add(this.tb_QT_MKC);
             this.panelQT.Controls.Add(this.labelMKC);
-            this.panelQT.Location = new System.Drawing.Point(333, 177);
+            this.panelQT.Location = new System.Drawing.Point(2, 212);
             this.panelQT.Name = "panelQT";
             this.panelQT.Size = new System.Drawing.Size(1321, 517);
             this.panelQT.TabIndex = 13;
             this.panelQT.Visible = false;
             // 
-            // labelNOTE1
+            // labelMKC
             // 
-            this.labelNOTE1.AutoSize = true;
-            this.labelNOTE1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNOTE1.ForeColor = System.Drawing.Color.Red;
-            this.labelNOTE1.Location = new System.Drawing.Point(492, 62);
-            this.labelNOTE1.Name = "labelNOTE1";
-            this.labelNOTE1.Size = new System.Drawing.Size(43, 31);
-            this.labelNOTE1.TabIndex = 3;
-            this.labelNOTE1.Text = "(*)";
-            this.labelNOTE1.Visible = false;
-            this.labelNOTE1.Click += new System.EventHandler(this.labelNOTE1_Click);
+            this.labelMKC.AutoSize = true;
+            this.labelMKC.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMKC.Location = new System.Drawing.Point(339, 62);
+            this.labelMKC.Name = "labelMKC";
+            this.labelMKC.Size = new System.Drawing.Size(161, 31);
+            this.labelMKC.TabIndex = 0;
+            this.labelMKC.Text = "Mật khẩu cũ";
+            this.labelMKC.Visible = false;
             // 
-            // labelNOTE2
+            // tb_QT_MKC
             // 
-            this.labelNOTE2.AutoSize = true;
-            this.labelNOTE2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNOTE2.ForeColor = System.Drawing.Color.Red;
-            this.labelNOTE2.Location = new System.Drawing.Point(493, 133);
-            this.labelNOTE2.Name = "labelNOTE2";
-            this.labelNOTE2.Size = new System.Drawing.Size(43, 31);
-            this.labelNOTE2.TabIndex = 3;
-            this.labelNOTE2.Text = "(*)";
-            this.labelNOTE2.Visible = false;
-            this.labelNOTE2.Click += new System.EventHandler(this.labelNOTE2_Click);
+            this.tb_QT_MKC.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_QT_MKC.Location = new System.Drawing.Point(537, 59);
+            this.tb_QT_MKC.Name = "tb_QT_MKC";
+            this.tb_QT_MKC.PasswordChar = '*';
+            this.tb_QT_MKC.Size = new System.Drawing.Size(405, 38);
+            this.tb_QT_MKC.TabIndex = 1;
+            this.tb_QT_MKC.Visible = false;
             // 
-            // labelNOTE3
+            // labelMKM
             // 
-            this.labelNOTE3.AutoSize = true;
-            this.labelNOTE3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNOTE3.ForeColor = System.Drawing.Color.Red;
-            this.labelNOTE3.Location = new System.Drawing.Point(493, 206);
-            this.labelNOTE3.Name = "labelNOTE3";
-            this.labelNOTE3.Size = new System.Drawing.Size(43, 31);
-            this.labelNOTE3.TabIndex = 3;
-            this.labelNOTE3.Text = "(*)";
-            this.labelNOTE3.Visible = false;
-            this.labelNOTE3.Click += new System.EventHandler(this.labelNOTE3_Click);
+            this.labelMKM.AutoSize = true;
+            this.labelMKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMKM.Location = new System.Drawing.Point(325, 133);
+            this.labelMKM.Name = "labelMKM";
+            this.labelMKM.Size = new System.Drawing.Size(175, 31);
+            this.labelMKM.TabIndex = 0;
+            this.labelMKM.Text = "Mật khẩu mới";
+            this.labelMKM.Visible = false;
+            // 
+            // tb_QT_MKM
+            // 
+            this.tb_QT_MKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_QT_MKM.Location = new System.Drawing.Point(537, 130);
+            this.tb_QT_MKM.Name = "tb_QT_MKM";
+            this.tb_QT_MKM.PasswordChar = '*';
+            this.tb_QT_MKM.Size = new System.Drawing.Size(405, 38);
+            this.tb_QT_MKM.TabIndex = 1;
+            this.tb_QT_MKM.Visible = false;
+            // 
+            // labelXNMKM
+            // 
+            this.labelXNMKM.AutoSize = true;
+            this.labelXNMKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelXNMKM.Location = new System.Drawing.Point(205, 206);
+            this.labelXNMKM.Name = "labelXNMKM";
+            this.labelXNMKM.Size = new System.Drawing.Size(296, 31);
+            this.labelXNMKM.TabIndex = 0;
+            this.labelXNMKM.Text = "Xác nhận mật khẩu mới";
+            this.labelXNMKM.Visible = false;
+            // 
+            // tb_QT_XNMKM
+            // 
+            this.tb_QT_XNMKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_QT_XNMKM.Location = new System.Drawing.Point(537, 203);
+            this.tb_QT_XNMKM.Name = "tb_QT_XNMKM";
+            this.tb_QT_XNMKM.PasswordChar = '*';
+            this.tb_QT_XNMKM.Size = new System.Drawing.Size(405, 38);
+            this.tb_QT_XNMKM.TabIndex = 1;
+            this.tb_QT_XNMKM.Visible = false;
             // 
             // buttonDoiMatKhau
             // 
@@ -2333,79 +2354,49 @@
             this.buttonDoiMatKhau.Visible = false;
             this.buttonDoiMatKhau.Click += new System.EventHandler(this.buttonDoiMatKhau_Click);
             // 
-            // tb_QT_XNMKM
+            // labelNOTE3
             // 
-            this.tb_QT_XNMKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_QT_XNMKM.Location = new System.Drawing.Point(537, 203);
-            this.tb_QT_XNMKM.Name = "tb_QT_XNMKM";
-            this.tb_QT_XNMKM.PasswordChar = '*';
-            this.tb_QT_XNMKM.Size = new System.Drawing.Size(405, 38);
-            this.tb_QT_XNMKM.TabIndex = 1;
-            this.tb_QT_XNMKM.Visible = false;
-            this.tb_QT_XNMKM.TextChanged += new System.EventHandler(this.tb_QT_XNMKM_TextChanged);
+            this.labelNOTE3.AutoSize = true;
+            this.labelNOTE3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNOTE3.ForeColor = System.Drawing.Color.Red;
+            this.labelNOTE3.Location = new System.Drawing.Point(493, 206);
+            this.labelNOTE3.Name = "labelNOTE3";
+            this.labelNOTE3.Size = new System.Drawing.Size(43, 31);
+            this.labelNOTE3.TabIndex = 3;
+            this.labelNOTE3.Text = "(*)";
+            this.labelNOTE3.Visible = false;
             // 
-            // labelXNMKM
+            // labelNOTE1
             // 
-            this.labelXNMKM.AutoSize = true;
-            this.labelXNMKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelXNMKM.Location = new System.Drawing.Point(205, 206);
-            this.labelXNMKM.Name = "labelXNMKM";
-            this.labelXNMKM.Size = new System.Drawing.Size(296, 31);
-            this.labelXNMKM.TabIndex = 0;
-            this.labelXNMKM.Text = "Xác nhận mật khẩu mới";
-            this.labelXNMKM.Visible = false;
-            this.labelXNMKM.Click += new System.EventHandler(this.labelXNMKM_Click);
+            this.labelNOTE1.AutoSize = true;
+            this.labelNOTE1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNOTE1.ForeColor = System.Drawing.Color.Red;
+            this.labelNOTE1.Location = new System.Drawing.Point(492, 62);
+            this.labelNOTE1.Name = "labelNOTE1";
+            this.labelNOTE1.Size = new System.Drawing.Size(43, 31);
+            this.labelNOTE1.TabIndex = 3;
+            this.labelNOTE1.Text = "(*)";
+            this.labelNOTE1.Visible = false;
             // 
-            // tb_QT_MKM
+            // labelNOTE2
             // 
-            this.tb_QT_MKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_QT_MKM.Location = new System.Drawing.Point(537, 130);
-            this.tb_QT_MKM.Name = "tb_QT_MKM";
-            this.tb_QT_MKM.PasswordChar = '*';
-            this.tb_QT_MKM.Size = new System.Drawing.Size(405, 38);
-            this.tb_QT_MKM.TabIndex = 1;
-            this.tb_QT_MKM.Visible = false;
-            this.tb_QT_MKM.TextChanged += new System.EventHandler(this.tb_QT_MKM_TextChanged);
-            // 
-            // labelMKM
-            // 
-            this.labelMKM.AutoSize = true;
-            this.labelMKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMKM.Location = new System.Drawing.Point(325, 133);
-            this.labelMKM.Name = "labelMKM";
-            this.labelMKM.Size = new System.Drawing.Size(175, 31);
-            this.labelMKM.TabIndex = 0;
-            this.labelMKM.Text = "Mật khẩu mới";
-            this.labelMKM.Visible = false;
-            this.labelMKM.Click += new System.EventHandler(this.labelMKM_Click);
-            // 
-            // tb_QT_MKC
-            // 
-            this.tb_QT_MKC.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_QT_MKC.Location = new System.Drawing.Point(537, 59);
-            this.tb_QT_MKC.Name = "tb_QT_MKC";
-            this.tb_QT_MKC.PasswordChar = '*';
-            this.tb_QT_MKC.Size = new System.Drawing.Size(405, 38);
-            this.tb_QT_MKC.TabIndex = 1;
-            this.tb_QT_MKC.Visible = false;
-            // 
-            // labelMKC
-            // 
-            this.labelMKC.AutoSize = true;
-            this.labelMKC.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMKC.Location = new System.Drawing.Point(339, 62);
-            this.labelMKC.Name = "labelMKC";
-            this.labelMKC.Size = new System.Drawing.Size(161, 31);
-            this.labelMKC.TabIndex = 0;
-            this.labelMKC.Text = "Mật khẩu cũ";
-            this.labelMKC.Visible = false;
-            this.labelMKC.Click += new System.EventHandler(this.labelMKC_Click);
+            this.labelNOTE2.AutoSize = true;
+            this.labelNOTE2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNOTE2.ForeColor = System.Drawing.Color.Red;
+            this.labelNOTE2.Location = new System.Drawing.Point(493, 133);
+            this.labelNOTE2.Name = "labelNOTE2";
+            this.labelNOTE2.Size = new System.Drawing.Size(43, 31);
+            this.labelNOTE2.TabIndex = 3;
+            this.labelNOTE2.Text = "(*)";
+            this.labelNOTE2.Visible = false;
             // 
             // GDChinhGiaoVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1325, 757);
+            this.Controls.Add(this.panelQT);
+            this.Controls.Add(this.dataGridViewTraCuu);
             this.Controls.Add(this.panelCapNhatGVPhuTrach);
             this.Controls.Add(this.panelSuaChuyenDeMo);
             this.Controls.Add(this.panelMoChuyenDe);
@@ -2628,17 +2619,15 @@
         private System.Windows.Forms.Button buttonLuuChinhSuaChuyenDeMo;
         private System.Windows.Forms.Button buttonCapNhatGVPhuTrach;
         private System.Windows.Forms.DataGridView dataGridViewTraCuu;
-        private System.Windows.Forms.Panel panelQT;
-        private System.Windows.Forms.Label labelNOTE1;
-        private System.Windows.Forms.Label labelNOTE2;
-        private System.Windows.Forms.Label labelNOTE3;
-        private System.Windows.Forms.Button buttonDoiMatKhau;
-        private System.Windows.Forms.TextBox tb_QT_XNMKM;
-        private System.Windows.Forms.Label labelXNMKM;
-        private System.Windows.Forms.TextBox tb_QT_MKM;
-        private System.Windows.Forms.Label labelMKM;
-        private System.Windows.Forms.TextBox tb_QT_MKC;
-        private System.Windows.Forms.Label labelMKC;
+        private System.Windows.Forms.GroupBox groupBoxTraCuuTTDK;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Button buttonTraCuuTTDK;
+        private System.Windows.Forms.TextBox tb_TTDK_TenCD;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.TextBox tb_TTDK_MaCD;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label_Diem;
+        private System.Windows.Forms.Label label62;
         private System.Windows.Forms.GroupBox groupBoxTraCuuDiem;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label66;
@@ -2651,19 +2640,21 @@
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.GroupBox groupBoxTraCuuTTDK;
         private System.Windows.Forms.ComboBox cbb_TTDK_HocKi;
         private System.Windows.Forms.ComboBox cbb_TTDK_NamHoc;
         private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Button buttonTraCuuTTDK;
-        private System.Windows.Forms.TextBox tb_TTDK_TenCD;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox tb_TTDK_MaCD;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label_Diem;
+        private System.Windows.Forms.Panel panelQT;
+        private System.Windows.Forms.Label labelNOTE1;
+        private System.Windows.Forms.Label labelNOTE2;
+        private System.Windows.Forms.Label labelNOTE3;
+        private System.Windows.Forms.Button buttonDoiMatKhau;
+        private System.Windows.Forms.TextBox tb_QT_XNMKM;
+        private System.Windows.Forms.Label labelXNMKM;
+        private System.Windows.Forms.TextBox tb_QT_MKM;
+        private System.Windows.Forms.Label labelMKM;
+        private System.Windows.Forms.TextBox tb_QT_MKC;
+        private System.Windows.Forms.Label labelMKC;
     }
 }
 

@@ -291,51 +291,5 @@ namespace VIEW_USECASE
         {
             //button_QT_LuuChinhSua_Click(sender, e);
         }
-
-        
-        private void labelNOTE2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelNOTE3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_QT_XNMKM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelXNMKM_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_QT_MKM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelMKM_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelNOTE1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelMKC_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_QT_TenTK_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

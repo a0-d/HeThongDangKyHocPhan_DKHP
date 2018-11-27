@@ -16,6 +16,7 @@ namespace VIEW_USECASE
     {
         public FrmGiaoVu()
         {
+            //update
             InitializeComponent();
             Load();
         }
