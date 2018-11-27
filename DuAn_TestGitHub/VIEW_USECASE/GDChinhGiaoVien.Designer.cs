@@ -106,6 +106,7 @@
             this.gbxThemDead = new System.Windows.Forms.GroupBox();
             this.cbChonLopThemDead = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dtDeadThem = new System.Windows.Forms.DateTimePicker();
             this.txtMaDeadThem = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtTenDeadThem = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label16 = new System.Windows.Forms.Label();
@@ -135,7 +136,6 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.txtTenDead = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cbMaDead = new System.Windows.Forms.ComboBox();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -156,7 +156,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dataGridViewChuyenDe = new System.Windows.Forms.DataGridView();
-            this.dtDeadThem = new System.Windows.Forms.DateTimePicker();
+            this.dtThoiHanCapNhat = new System.Windows.Forms.DateTimePicker();
             this.panelFunction.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -285,6 +285,7 @@
             // btnCapNhatDead
             // 
             this.btnCapNhatDead.BackColor = System.Drawing.Color.Crimson;
+            this.btnCapNhatDead.Enabled = false;
             this.btnCapNhatDead.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatDead.ForeColor = System.Drawing.Color.Gold;
             this.btnCapNhatDead.Image = global::VIEW_USECASE.Properties.Resources.Pen_icon;
@@ -300,6 +301,7 @@
             // btnThemDead
             // 
             this.btnThemDead.BackColor = System.Drawing.Color.Plum;
+            this.btnThemDead.Enabled = false;
             this.btnThemDead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemDead.ForeColor = System.Drawing.Color.Crimson;
             this.btnThemDead.Image = global::VIEW_USECASE.Properties.Resources.time_icon;
@@ -326,6 +328,7 @@
             // btnCNSLLop
             // 
             this.btnCNSLLop.BackColor = System.Drawing.Color.DimGray;
+            this.btnCNSLLop.Enabled = false;
             this.btnCNSLLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCNSLLop.ForeColor = System.Drawing.Color.LightCoral;
             this.btnCNSLLop.Image = global::VIEW_USECASE.Properties.Resources.Group_icon;
@@ -341,6 +344,7 @@
             // btnCapNhatSLSV
             // 
             this.btnCapNhatSLSV.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCapNhatSLSV.Enabled = false;
             this.btnCapNhatSLSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhatSLSV.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCapNhatSLSV.Image = global::VIEW_USECASE.Properties.Resources.contact_icon;
@@ -1105,6 +1109,16 @@
             this.groupBox6.TabIndex = 9;
             this.groupBox6.TabStop = false;
             // 
+            // dtDeadThem
+            // 
+            this.dtDeadThem.CalendarMonthBackground = System.Drawing.Color.DarkCyan;
+            this.dtDeadThem.CalendarTitleBackColor = System.Drawing.Color.Bisque;
+            this.dtDeadThem.CalendarTitleForeColor = System.Drawing.Color.LightYellow;
+            this.dtDeadThem.Location = new System.Drawing.Point(173, 140);
+            this.dtDeadThem.Name = "dtDeadThem";
+            this.dtDeadThem.Size = new System.Drawing.Size(375, 30);
+            this.dtDeadThem.TabIndex = 30;
+            // 
             // txtMaDeadThem
             // 
             this.txtMaDeadThem.BorderColorFocused = System.Drawing.Color.Crimson;
@@ -1465,9 +1479,9 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.dtThoiHanCapNhat);
             this.groupBox7.Controls.Add(this.txtTenDead);
             this.groupBox7.Controls.Add(this.cbMaDead);
-            this.groupBox7.Controls.Add(this.bunifuDatepicker1);
             this.groupBox7.Controls.Add(this.label12);
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.label18);
@@ -1502,20 +1516,7 @@
             this.cbMaDead.Name = "cbMaDead";
             this.cbMaDead.Size = new System.Drawing.Size(375, 33);
             this.cbMaDead.TabIndex = 9;
-            // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.DarkCyan;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(186, 126);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(8);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(376, 37);
-            this.bunifuDatepicker1.TabIndex = 8;
-            this.bunifuDatepicker1.Value = new System.DateTime(2018, 11, 19, 14, 18, 29, 464);
+            this.cbMaDead.DropDown += new System.EventHandler(this.ComboxDead_Load);
             // 
             // label12
             // 
@@ -1571,6 +1572,7 @@
             this.btnUpdateDead.Size = new System.Drawing.Size(181, 41);
             this.btnUpdateDead.TabIndex = 16;
             this.btnUpdateDead.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUpdateDead.Click += new System.EventHandler(this.btnUpdateDead_Click);
             // 
             // cbLopCapNhatDead
             // 
@@ -1744,15 +1746,12 @@
             this.dataGridViewChuyenDe.TabIndex = 0;
             this.dataGridViewChuyenDe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChuyenDe_CellClick);
             // 
-            // dtDeadThem
+            // dtThoiHanCapNhat
             // 
-            this.dtDeadThem.CalendarMonthBackground = System.Drawing.Color.DarkCyan;
-            this.dtDeadThem.CalendarTitleBackColor = System.Drawing.Color.Bisque;
-            this.dtDeadThem.CalendarTitleForeColor = System.Drawing.Color.LightYellow;
-            this.dtDeadThem.Location = new System.Drawing.Point(173, 140);
-            this.dtDeadThem.Name = "dtDeadThem";
-            this.dtDeadThem.Size = new System.Drawing.Size(375, 30);
-            this.dtDeadThem.TabIndex = 30;
+            this.dtThoiHanCapNhat.Location = new System.Drawing.Point(186, 128);
+            this.dtThoiHanCapNhat.Name = "dtThoiHanCapNhat";
+            this.dtThoiHanCapNhat.Size = new System.Drawing.Size(375, 30);
+            this.dtThoiHanCapNhat.TabIndex = 11;
             // 
             // GDChinhGiaoVien
             // 
@@ -1760,9 +1759,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1325, 733);
+            this.Controls.Add(this.panel_CapNhatDead);
             this.Controls.Add(this.panelThemDead);
             this.Controls.Add(this.panelChinh);
-            this.Controls.Add(this.panel_CapNhatDead);
             this.Controls.Add(this.panel_TraCuuDiem);
             this.Controls.Add(this.panelTraCuuTTDK);
             this.Controls.Add(this.panelQT);
@@ -1880,7 +1879,6 @@
         private System.Windows.Forms.Panel panel_CapNhatDead;
         private System.Windows.Forms.GroupBox gbxCapNhatDead;
         private System.Windows.Forms.GroupBox groupBox7;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private Bunifu.Framework.UI.BunifuThinButton2 btnUpdateDead;
@@ -1952,6 +1950,7 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox cbChonLopThemDead;
         private System.Windows.Forms.DateTimePicker dtDeadThem;
+        private System.Windows.Forms.DateTimePicker dtThoiHanCapNhat;
     }
 }
 

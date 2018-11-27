@@ -10,7 +10,8 @@ namespace VIEW_USECASE
 {
     public class Provider
     {
-        public static string ConnectionString = @"Server=DESKTOP-CCFAEH9;Database=DangKyHocPhan; User Id =sa; Password=123;";
+        public static string ConnectionString = @"Server=.;Database=DangKyHocPhan; Trusted_Connection=True;";
+
         public SqlConnection Connection { get; set; }
         
         public static SqlConnection ConnectDatabase()
@@ -26,7 +27,7 @@ namespace VIEW_USECASE
         }
         
     }
-    public class TT
+    public class TTGiaoVien
     {
         public int ExcuteNonQuery(CommandType cmdType, string strSql, params SqlParameter[] parameters)
         {
@@ -88,6 +89,27 @@ namespace VIEW_USECASE
 
             return dataTable;
         }
+        public DataTable DeadCombobox(string malop)
+        {
+
+
+            SqlConnection sqlConnection = Provider.ConnectDatabase();
+
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.Connection = sqlConnection;
+            sqlCommand.CommandText = "proc_11 '" + malop + "'";
+            sqlCommand.CommandType = CommandType.Text;
+
+            DataTable dataTable = new DataTable();
+
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            sqlDataAdapter.Fill(dataTable);
+
+            Provider.CloseConnection(sqlConnection);
+
+            return dataTable;
+        }
         public int GetMaxOrderIDDEAD()
         {
             SqlConnection sql = Provider.ConnectDatabase();
@@ -112,6 +134,18 @@ namespace VIEW_USECASE
             cm.Parameters.Add(new SqlParameter("@tendead", tendead));
             cm.Parameters.Add(new SqlParameter("@thoihan", hanThemdead));
         
+
+            cm.ExecuteNonQuery();
+        }
+        public void UpdateDead(int madead, string tendead, DateTime hanThemdead)
+        {
+            SqlConnection sql = Provider.ConnectDatabase();
+            string strSQL = "proc_25 @madead, @tendead, @thoihan";
+            SqlCommand cm = new SqlCommand(strSQL, sql);
+            cm.Parameters.Add(new SqlParameter("@madead", Convert.ToString(madead)));
+            cm.Parameters.Add(new SqlParameter("@tendead", tendead));
+            cm.Parameters.Add(new SqlParameter("@thoihan", hanThemdead));
+
 
             cm.ExecuteNonQuery();
         }
