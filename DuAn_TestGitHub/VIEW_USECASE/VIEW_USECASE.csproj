@@ -141,6 +141,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider.cs" />
+    <Compile Include="TTGiaoVien.cs" />
     <EmbeddedResource Include="FrmGiaoVu.resx">
       <DependentUpon>FrmGiaoVu.cs</DependentUpon>
     </EmbeddedResource>
