@@ -10,7 +10,7 @@ namespace VIEW_USECASE
 {
     public class Provider
     {
-        public static string ConnectionString = @"Server=.;Database=DangKyHocPhan; Trusted_Connection=True;";
+        public static string ConnectionString = @"Server=.;Database=HeThongDangKyHocPhan; Trusted_Connection=True;";
 
         public SqlConnection Connection { get; set; }
         
