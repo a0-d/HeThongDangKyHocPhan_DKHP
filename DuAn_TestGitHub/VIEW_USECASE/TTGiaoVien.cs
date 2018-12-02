@@ -588,5 +588,16 @@ namespace VIEW_USECASE
 
             cm.ExecuteNonQuery();
         }
+        public void DeleteKhaNang(string tencd, string magv)
+        {
+            SqlConnection sql = Provider.ConnectDatabase();
+            string strSQL = "proc_gvien36 @tencd, @magv";
+            SqlCommand cm = new SqlCommand(strSQL, sql);
+            cm.Parameters.Add(new SqlParameter("@tencd", tencd));
+            cm.Parameters.Add(new SqlParameter("@magv", magv));
+
+
+            cm.ExecuteNonQuery();
+        }
     }
 }

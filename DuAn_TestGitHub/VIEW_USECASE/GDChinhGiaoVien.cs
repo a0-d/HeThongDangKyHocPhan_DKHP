@@ -800,5 +800,32 @@ namespace VIEW_USECASE
             txtTenDead.Text = ma.LayTenDead(cbMaDead.Text);
             dtThoiHanCapNhat.Value = ma.LayThoiHanDead(cbMaDead.Text);
         }
+
+        private void btnXoaCDKhaNang_Click(object sender, EventArgs e)
+        {
+            if (cbxTenCD.Text == "")
+            {
+                MessageBox.Show("Bạn chưa chọn tên chuyên đề!");
+            }
+            else
+            {
+
+
+                TTGiaoVien khanang = new TTGiaoVien();
+                int temp = khanang.CheckKhaNang(IDNguoiDung, cbxTenCD.Text);
+                if (khanang.CheckKhaNang(IDNguoiDung, cbxTenCD.Text) == 0)
+                {
+                    MessageBox.Show("Giáo Viên Chưa Có Sẵn Khả Năng Dạy Môn Học Này!");
+
+                }
+                else
+                {
+                    khanang.DeleteKhaNang(cbxTenCD.Text, IDNguoiDung);
+                    MessageBox.Show("Đã Xóa Thông Tin Thành công!");
+                }
+
+            }
+            GDChinhGiaoVien_Load(sender, e);
+        }
     }
 }
