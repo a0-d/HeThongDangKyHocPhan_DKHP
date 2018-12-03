@@ -133,7 +133,7 @@
         MqMGYkTUMIeoYQ5RwxyihjHO/QIRcJws2N2WeQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCapNhatNhom.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALUAAAApCAYAAABz92iRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVHhe7dyva0JRGIdx4+Li4uLi4uLi4uLi/oy1xQWD
@@ -164,6 +164,21 @@
 </value>
   </data>
   <data name="btnUpdateDead.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALUAAAApCAYAAABz92iRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVHhe7dyva0JRGIdx4+Li4uLi4uLi4uLi/oy1xQWD
+        YDAIMgwygzDBYBwIMtuCQTA4EGQYZAZhguGM79Fz2UW90Xleng9cEPcjPR5er+eYc4AxRA1ziBrmEDXM
+        IWqYQ9QwJzPqn9XKvQwG7q7Vctf1ujsvl10un+fiOvil9tTgbbPpnvt9971cbirdtjfq9mjk/5GCVthv
+        47H7nM83PwUOS+2pwdfh0N23275Nxb3LVtR6BeiPbhoN97VYbJ4FjktWp6mo9YuX1ereVwBwbDRRXNVq
+        qSkiFbXKJ2jERmOJ5u0giVrFaykHYvTQ6binXs8/9lHrLocGb2ZoxEoNa3QezGbrqDVyaPQAYqaVWiu2
+        j1r3/nSrBIjZx3TqV2sf9UWl4pdtIGYaQU4KhXXUp8Vi5ic0QCz8J5DhAWABUcMcooY5RA1ziBrmEDXM
+        IWqYQ9QwJ4lan8Lo0xggdknU2qHHUS1YkEStfdTaTw3ETPuXtI/JRx227AExC1uofdQaPVQ4czViFrZQ
+        +6jlsdv1FxCj8P00kkStVVqHF98nk80zQBx0DFGTRtg+nUQtGrTDOS8gBgpai7FOlAepqEUrtcIOJ3OB
+        Y6X5WSv036BlK2rRKKK7IXoF6B0lp8xxLDRihPlZbwx3ndjaGXWgV4BukZyVSuub2lxc/3zp6GH4fsd9
+        MqMGYkTUMIeoYQ5RwxyihjHO/QIRcJws2N2WeQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnXoaCDKhaNang.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALUAAAApCAYAAABz92iRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIVSURBVHhe7dyva0JRGIdx4+Li4uLi4uLi4uLi/oy1xQWD
