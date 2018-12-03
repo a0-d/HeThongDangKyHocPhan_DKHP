@@ -20,7 +20,8 @@ namespace VIEW_USECASE
             /// code của Chiều Chiều
             //Application.Run(new GDChinhGiaoVu());
             //Application.Run(new FrmLOGIN());
-            Application.Run(new FrmGiaoVu());
+            Application.Run(new FrmGiaoVu());\
+            //Comment ChieuChieu
         }
     }
 }
