@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VIEW_USECASE.GiaoVu
+namespace TestAnime
 {
-    public partial class LoadData : Form
+    public partial class Form1 : Form
     {
-        public LoadData()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Đã click Tìm kiếm");
         }
     }
 }
