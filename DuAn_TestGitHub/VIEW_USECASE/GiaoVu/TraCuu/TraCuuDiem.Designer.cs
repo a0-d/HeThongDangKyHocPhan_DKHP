@@ -32,7 +32,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnTraCuu = new Telerik.WinControls.UI.RadButton();
+            this.btnTraCuu = new System.Windows.Forms.RadioButton();
             this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -42,7 +42,7 @@
             this.tbTenCD = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTraCuu)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.btnTraCuu)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -237,7 +237,6 @@
             // 
             // TraCuuDiem
             // 
-            this.AcceptButton = this.btnTraCuu;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -247,7 +246,7 @@
             this.Text = "TraCuuDiem";
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTraCuu)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.btnTraCuu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,7 +258,7 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.Label label2;
-        private Telerik.WinControls.UI.RadButton btnTraCuu;
+        private System.Windows.Forms.RadioButton btnTraCuu;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;

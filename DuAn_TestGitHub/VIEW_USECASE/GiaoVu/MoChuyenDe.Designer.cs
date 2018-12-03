@@ -39,7 +39,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radGroupBox1 = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
             this.cbbTenBatDau = new System.Windows.Forms.ComboBox();
             this.SLSVTD1N = new System.Windows.Forms.NumericUpDown();
@@ -55,7 +55,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnThemChuyenDe = new Telerik.WinControls.UI.RadButton();
+            this.btnThemChuyenDe = new System.Windows.Forms.Button();
             this.cbbNamHoc = new System.Windows.Forms.ComboBox();
             this.cbbHocKi = new System.Windows.Forms.ComboBox();
             this.lbNote = new System.Windows.Forms.Label();
@@ -238,7 +238,7 @@
             this.radGroupBox1.Controls.Add(this.label6);
             this.radGroupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.radGroupBox1.ForeColor = System.Drawing.Color.Red;
-            this.radGroupBox1.HeaderText = "Thông tin lớp";
+            //this.radGroupBox1.HeaderText = "Thông tin lớp";
             this.radGroupBox1.Location = new System.Drawing.Point(164, 193);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(980, 229);
@@ -533,7 +533,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
+        private System.Windows.Forms.GroupBox radGroupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown SLSVTD1N;
@@ -545,7 +545,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label6;
-        private Telerik.WinControls.UI.RadButton btnThemChuyenDe;
+        private System.Windows.Forms.Button btnThemChuyenDe;
         private System.Windows.Forms.ComboBox cbbTenBatDau;
         private System.Windows.Forms.ComboBox cbbNamHoc;
         private System.Windows.Forms.ComboBox cbbHocKi;

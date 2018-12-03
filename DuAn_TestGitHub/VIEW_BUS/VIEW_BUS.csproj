@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO_GiaoVien\Provider.cs" />
+    <Compile Include="DAO_GiaoVien\TTGiaoVien.cs" />
     <Compile Include="Dao_GiaoVu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -48,10 +50,6 @@
     <ProjectReference Include="..\VIEW_DTO\VIEW_DTO.csproj">
       <Project>{ba391c44-3810-47a6-aca1-529e78d51338}</Project>
       <Name>VIEW_DTO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\VIEW_USECASE\VIEW_USECASE.csproj">
-      <Project>{77c9574f-6331-4cee-987a-b89de16e0e5e}</Project>
-      <Name>VIEW_USECASE</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

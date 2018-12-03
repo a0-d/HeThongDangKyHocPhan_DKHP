@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VIEW_BUS;
 
 namespace VIEW_USECASE
 {
     public partial class GDChinhGiaoVien : Form
     {
         string IDChuyenDe = "";
+        
         public string IDNguoiDung = "ND06";
         public GDChinhGiaoVien()
         {
@@ -44,7 +46,7 @@ namespace VIEW_USECASE
             DataTable dt1 = chuyende.LayDSChuyeDe();
             DataTable dt2 = chuyende.LayDSChuyeDeDangDay();
             DataTable dt3 = chuyende.LayDSChuyeDeDangDayCOLOP(IDNguoiDung);
-
+            chuyende.mand = IDNguoiDung;
             dataGridViewDangMo.DataSource = dt;
             dataGridViewCDAll.DataSource = dt1;
             dataGridViewDangDay.DataSource = dt3;

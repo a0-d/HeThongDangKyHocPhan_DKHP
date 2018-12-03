@@ -5,11 +5,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VIEW_BUS;
 
 namespace VIEW_USECASE
 {
     public class TTGiaoVien
     {
+        public string mand;
         public int ExcuteNonQuery(CommandType cmdType, string strSql, params SqlParameter[] parameters)
         {
             try
@@ -93,12 +95,11 @@ namespace VIEW_USECASE
         public DataTable LayDSChuyeDeDangDay()
         {
             //Tạo kết nối
-            GDChinhGiaoVien temp = new GDChinhGiaoVien();
             SqlConnection sqlConnection = Provider.ConnectDatabase();
 
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.Connection = sqlConnection;
-            sqlCommand.CommandText = "proc_gvien04 '" + temp.IDNguoiDung + "' ";
+            sqlCommand.CommandText = "proc_gvien04 '" + mand + "' ";
             sqlCommand.CommandType = CommandType.Text;
 
             DataTable dataTable = new DataTable();

@@ -23,11 +23,11 @@ namespace VIEW_USECASE.GiaoVu
             tbMaCD.Text = n.MaCD;
             if(n.TinhTrang == 0)
             {
-                rdoVoHieuHoa.IsChecked = true;
+                rdoVoHieuHoa.Checked = true;
             }
             else
             {
-                rdoMo.IsChecked = true;
+                rdoMo.Checked = true;
             }
             var dsbg = Dao_GiaoVu.DSBaoGom();
             string ma = "";
@@ -59,7 +59,7 @@ namespace VIEW_USECASE.GiaoVu
         private void btnThemChuyenDe_Click(object sender, EventArgs e)
         {
             int ttrang = 0;
-            if(rdoMo.IsChecked == true)
+            if(rdoMo.Checked == true)
             {
                 ttrang = 1;
             }

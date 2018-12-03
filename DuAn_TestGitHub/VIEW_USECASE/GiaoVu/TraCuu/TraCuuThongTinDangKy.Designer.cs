@@ -31,7 +31,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnTraCuu = new Telerik.WinControls.UI.RadButton();
+            this.btnTraCuu = new System.Windows.Forms.Button();
             this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -41,7 +41,7 @@
             this.tbTenCD = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTraCuu)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.btnTraCuu)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -232,7 +232,7 @@
             this.Text = "TraCuuThongTinDangKy";
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTraCuu)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.btnTraCuu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -242,7 +242,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private Telerik.WinControls.UI.RadButton btnTraCuu;
+        private System.Windows.Forms.Button btnTraCuu;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;

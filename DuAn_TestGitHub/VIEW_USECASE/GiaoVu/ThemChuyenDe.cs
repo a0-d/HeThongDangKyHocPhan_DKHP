@@ -27,14 +27,14 @@ namespace VIEW_USECASE.GiaoVu
 
         private void ThemChuyenDe_Load(object sender, EventArgs e)
         {
-            TTGiaoVu tuongtac = new TTGiaoVu();
+            //TTGiaoVu tuongtac = new TTGiaoVu();
 
-            DataTable dt = new DataTable();
-            dt = tuongtac.DSChuyenDeThuocNganh();
-            dt.Columns.Add("tennganh", typeof(string));
-            dt.Dispose();
-            cbbThuocNganh.ValueMember = "tennganh";
-            cbbThuocNganh.DataSource = dt;
+            //DataTable dt = new DataTable();
+            ////dt = tuongtac.DSChuyenDeThuocNganh();
+            //dt.Columns.Add("tennganh", typeof(string));
+            //dt.Dispose();
+            //cbbThuocNganh.ValueMember = "tennganh";
+            //cbbThuocNganh.DataSource = dt;
         }
 
         private void btnThemChuyenDe_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace VIEW_USECASE.GiaoVu
             {
                 if(tbMaCD.Text != "" && KiemtraSpace(tbMaCD.Text) == 1)
                 {
-                    if(rdoMo.IsChecked == true)
+                    if(rdoMo.Checked == true)
                     {
 
                     }
@@ -86,7 +86,7 @@ namespace VIEW_USECASE.GiaoVu
                             lbNote.ForeColor = System.Drawing.Color.Blue;
                             tbMaCD.Text = "";
                             tbTenCD.Text = "";
-                            rdoVoHieuHoa.IsChecked = true;
+                            rdoVoHieuHoa.Checked = true;
                             cbbThuocNganh.Text = "Văn Phòng";
                         }
                         else

@@ -54,7 +54,7 @@ namespace VIEW_USECASE.GiaoVu
             tbThuocNganh.Text = manganh;
 
             //Năm học
-            TTGiaoVu tuongtac = new TTGiaoVu();
+            //TTGiaoVu tuongtac = new TTGiaoVu();
             var dsNH = Dao_GiaoVu.DSNamHoc();
             foreach(var tt in dsNH)
             {

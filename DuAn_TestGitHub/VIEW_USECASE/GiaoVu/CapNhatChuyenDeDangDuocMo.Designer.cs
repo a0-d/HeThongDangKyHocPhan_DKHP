@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLuuThayDoi = new Telerik.WinControls.UI.RadButton();
-            this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.btnLuuThayDoi = new System.Windows.Forms.Button();
+            this.radGroupBox1 = new System.Windows.Forms.GroupBox();
             this.cbbTenBatDau = new System.Windows.Forms.ComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SLSV1Nhom = new System.Windows.Forms.NumericUpDown();
@@ -98,7 +98,7 @@
             this.radGroupBox1.Controls.Add(this.label6);
             this.radGroupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.radGroupBox1.ForeColor = System.Drawing.Color.Red;
-            this.radGroupBox1.HeaderText = "Thông tin lớp";
+            //this.radGroupBox1.HeaderText = "Thông tin lớp";
             this.radGroupBox1.Location = new System.Drawing.Point(164, 193);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(980, 229);
@@ -472,8 +472,8 @@
 
         #endregion
 
-        private Telerik.WinControls.UI.RadButton btnLuuThayDoi;
-        private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
+        private System.Windows.Forms.Button btnLuuThayDoi;
+        private System.Windows.Forms.GroupBox radGroupBox1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.NumericUpDown SLSV1Nhom;
         private System.Windows.Forms.NumericUpDown SLNhom;

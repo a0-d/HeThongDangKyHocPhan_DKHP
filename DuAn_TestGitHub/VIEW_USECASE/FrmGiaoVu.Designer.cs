@@ -73,7 +73,7 @@
             this.btnTab2 = new System.Windows.Forms.Button();
             this.btnTab1 = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.tbTimKiem = new Telerik.WinControls.UI.RadTextBox();
+            this.tbTimKiem = new System.Windows.Forms.TextBox();
             this.tabControlData = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewTatCaChuyenDe = new System.Windows.Forms.DataGridView();
@@ -94,7 +94,7 @@
             this.TabPageQT.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panelTrangChu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTimKiem)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.tbTimKiem)).BeginInit();
             this.tabControlData.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTatCaChuyenDe)).BeginInit();
@@ -972,7 +972,7 @@
             this.groupBox5.PerformLayout();
             this.panelTrangChu.ResumeLayout(false);
             this.panelTrangChu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTimKiem)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.tbTimKiem)).EndInit();
             this.tabControlData.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTatCaChuyenDe)).EndInit();
@@ -1023,7 +1023,7 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Panel panelTrangChu;
         private System.Windows.Forms.Button btnTimKiem;
-        private Telerik.WinControls.UI.RadTextBox tbTimKiem;
+        private System.Windows.Forms.TextBox tbTimKiem;
         private System.Windows.Forms.TabControl tabControlData;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridViewTatCaChuyenDe;

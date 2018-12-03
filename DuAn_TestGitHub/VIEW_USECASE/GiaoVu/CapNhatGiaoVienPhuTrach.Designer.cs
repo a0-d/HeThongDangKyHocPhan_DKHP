@@ -41,7 +41,7 @@
             this.tbNamHoc = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tbHocKi = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.cbbGiaoVienPhuTrach = new System.Windows.Forms.ComboBox();
-            this.btnLuuThayDoi = new Telerik.WinControls.UI.RadButton();
+            this.btnLuuThayDoi = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbbLop = new System.Windows.Forms.ComboBox();
@@ -331,7 +331,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox tbNamHoc;
         private Bunifu.Framework.UI.BunifuMaterialTextbox tbHocKi;
         private System.Windows.Forms.ComboBox cbbGiaoVienPhuTrach;
-        private Telerik.WinControls.UI.RadButton btnLuuThayDoi;
+        private System.Windows.Forms.Button btnLuuThayDoi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbbLop;

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.cbbThuocNganh = new MetroFramework.Controls.MetroComboBox();
-            this.rdoVoHieuHoa = new Telerik.WinControls.UI.RadRadioButton();
-            this.rdoMo = new Telerik.WinControls.UI.RadRadioButton();
+            this.rdoVoHieuHoa = new System.Windows.Forms.RadioButton();
+            this.rdoMo = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbTenCD = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnThemChuyenDe = new Telerik.WinControls.UI.RadButton();
+            this.btnThemChuyenDe = new System.Windows.Forms.Button();
             this.lbNote = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.rdoVoHieuHoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rdoMo)).BeginInit();
@@ -76,14 +76,12 @@
             // 
             // rdoMo
             // 
-            this.rdoMo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.rdoMo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.rdoMo.Location = new System.Drawing.Point(366, 215);
             this.rdoMo.Name = "rdoMo";
             this.rdoMo.Size = new System.Drawing.Size(46, 25);
             this.rdoMo.TabIndex = 12;
             this.rdoMo.Text = "Mở";
-            this.rdoMo.ToggleState = Telerik.WinControls.Enumerations.ToggleState.On;
             // 
             // label4
             // 
@@ -267,8 +265,8 @@
         #endregion
 
         private MetroFramework.Controls.MetroComboBox cbbThuocNganh;
-        private Telerik.WinControls.UI.RadRadioButton rdoVoHieuHoa;
-        private Telerik.WinControls.UI.RadRadioButton rdoMo;
+        private System.Windows.Forms.RadioButton rdoVoHieuHoa;
+        private System.Windows.Forms.RadioButton rdoMo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
@@ -279,7 +277,7 @@
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuMaterialTextbox tbTenCD;
         private System.Windows.Forms.Label label1;
-        private Telerik.WinControls.UI.RadButton btnThemChuyenDe;
+        private System.Windows.Forms.Button btnThemChuyenDe;
         private System.Windows.Forms.Label lbNote;
     }
 }
