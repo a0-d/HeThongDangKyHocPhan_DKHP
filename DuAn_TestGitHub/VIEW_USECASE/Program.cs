@@ -21,7 +21,7 @@ namespace VIEW_USECASE
             //Application.Run(new GDChinhGiaoVu());
             //Application.Run(new FrmLOGIN());
             //Application.Run(new FrmGiaoVu());
-            //Comment ChieuChieu
+            //Comment ChieuChieu ầgafaffsdfdsf
         }
     }
 }
