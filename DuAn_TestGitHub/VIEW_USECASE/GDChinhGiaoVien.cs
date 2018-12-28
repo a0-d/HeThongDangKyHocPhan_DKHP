@@ -143,6 +143,8 @@ namespace VIEW_USECASE
         {
             int i = LoadText();
             if (i == 1) return;
+            btnCapNhatDead.Enabled = true;
+
             btnThemDead.Enabled = true;
             btnCNSLLop.Enabled = true;
             btnCapNhatSLSV.Enabled = true;
@@ -198,7 +200,7 @@ namespace VIEW_USECASE
         private void ComboxLop_Load(object sender, EventArgs e)
         {
             TTGiaoVien orders = new TTGiaoVien();
-            DataTable dt = orders.LopCombobox(IDChuyenDe);
+            DataTable dt = orders.LopCombobox(IDChuyenDe, IDNguoiDung);
 
             dt.Columns.Add("malop", typeof(string));
             dt.Dispose();
@@ -212,7 +214,7 @@ namespace VIEW_USECASE
         private void ComboxDead_Load(object sender, EventArgs e)
         {
             TTGiaoVien a = new TTGiaoVien();
-            DataTable dt = a.DeadCombobox(cbLopCapNhatDead.Text);
+            DataTable dt = a.DeadCombobox(cbLopCapNhatDead.Text, IDNguoiDung);
 
             dt.Columns.Add("madead", typeof(string));
             dt.Dispose();
@@ -263,7 +265,7 @@ namespace VIEW_USECASE
             TTGiaoVien ten = new TTGiaoVien();
             txtTenCDCNSV.Text = ten.TenCDtxt(IDChuyenDe);
             txtTenCD.Text = ten.TenCDtxt(IDChuyenDe);
-            txtSLSVCNLop.Text = ten.SoLuongLop(IDChuyenDe).ToString();
+            txtSLSVCNLop.Text = ten.SoLuongLop(IDChuyenDe, IDNguoiDung).ToString();
             txtNhomCapNhat.Text = ten.SoLuongNhom(IDChuyenDe).ToString();
             txtSinhVienCN.Text = ten.SoLuongSinhVien(IDChuyenDe).ToString();
         }
@@ -765,7 +767,7 @@ namespace VIEW_USECASE
             {
 
                 TTGiaoVien update = new TTGiaoVien();
-                update.UpdateNhomVsSV(IDChuyenDe, Convert.ToInt32(txtSinhVienCN.Text), Convert.ToInt32(txtNhomCapNhat.Text));
+                update.UpdateNhomVsSV(IDChuyenDe, Convert.ToInt32(txtSinhVienCN.Text), Convert.ToInt32(txtNhomCapNhat.Text), IDNguoiDung);
                 MessageBox.Show("Đã Cập Nhật Thông Tin Thành công!");
             }
             GDChinhGiaoVien_Load(sender, e);
@@ -777,11 +779,11 @@ namespace VIEW_USECASE
         {
             TTGiaoVien a = new TTGiaoVien();
 
-            int solopcu = a.SoLuongLop(IDChuyenDe);
+            int solopcu = a.SoLuongLopDayDu(IDChuyenDe);
             string tenlop = a.LayTenLop(IDChuyenDe, solopcu);
             int temp = solopcu;
 
-            int solop = Convert.ToInt32(txtSLSVCNLop.Text);
+            int solop = Convert.ToInt32(txtSLSVCNLop.Text) + solopcu - a.SoLuongLop(IDChuyenDe, IDNguoiDung);
             string lopid;
             if (solop > 20)
             {
@@ -801,7 +803,7 @@ namespace VIEW_USECASE
                     temp++;
                     lopid = tenlop.Replace(IDChuyenDe + solopcu.ToString(), "");
                     lopid = lopid.Replace(" ", "") + IDChuyenDe + temp;
-                    a.InsertLop(IDChuyenDe, lopid);
+                    a.InsertLop(IDChuyenDe, lopid, IDNguoiDung);
                 }
             }
             if (solop < solopcu)

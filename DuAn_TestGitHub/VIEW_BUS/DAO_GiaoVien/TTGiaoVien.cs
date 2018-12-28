@@ -205,7 +205,7 @@ namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
             }
 
             //Combobox
-            public DataTable LopCombobox(string macd)
+            public DataTable LopCombobox(string macd, string mand)
             {
 
 
@@ -213,8 +213,9 @@ namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
 
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "proc_gvien08 @macd";
+                sqlCommand.CommandText = "proc_gvien08 @macd, @mand";
                 sqlCommand.Parameters.Add(new SqlParameter("@macd", macd));
+                sqlCommand.Parameters.Add(new SqlParameter("@mand", mand));
 
                 sqlCommand.CommandType = CommandType.Text;
 
@@ -228,7 +229,7 @@ namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
 
                 return dataTable;
             }
-            public DataTable DeadCombobox(string malop)
+            public DataTable DeadCombobox(string malop, string mand)
             {
 
 
@@ -236,7 +237,10 @@ namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
 
                 SqlCommand sqlCommand = new SqlCommand();
                 sqlCommand.Connection = sqlConnection;
-                sqlCommand.CommandText = "proc_gvien09 '" + malop + "'";
+                sqlCommand.CommandText = "proc_gvien09 @malop, @mand";
+                sqlCommand.Parameters.Add(new SqlParameter("@malop", malop));
+    
+                sqlCommand.Parameters.Add(new SqlParameter("@mand", mand));
 
                 sqlCommand.CommandType = CommandType.Text;
 
@@ -432,23 +436,40 @@ namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
 
                 return temp;
             }
-            public int SoLuongLop(string macd)
+            public int SoLuongLop(string macd, string mand)
             {
 
                 SqlConnection sql = Provider.ConnectDatabase();
                 int temp;
 
-                using (SqlCommand cmd = new SqlCommand("proc_gvien21 @macd", sql))
+                using (SqlCommand cmd = new SqlCommand("proc_gvien21 @macd, @mand", sql))
                 {
                     cmd.Parameters.Add(new SqlParameter("@macd", macd));
+                    cmd.Parameters.Add(new SqlParameter("@mand", mand));
+
 
                     temp = (int)cmd.ExecuteScalar();
                 }
 
                 return temp;
             }
+        public int SoLuongLopDayDu(string macd)
+        {
 
-            public int GetMaxIDDEAD(string malop)
+            SqlConnection sql = Provider.ConnectDatabase();
+            int temp;
+
+            using (SqlCommand cmd = new SqlCommand("proc_gvien21_1 @macd", sql))
+            {
+                cmd.Parameters.Add(new SqlParameter("@macd", macd));
+                
+                temp = (int)cmd.ExecuteScalar();
+            }
+
+            return temp;
+        }
+
+        public int GetMaxIDDEAD(string malop)
             {
                 SqlConnection sql = Provider.ConnectDatabase();
                 int temp = -1;
@@ -571,16 +592,18 @@ namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
 
                 cm.ExecuteNonQuery();
             }
-            public void InsertLop(string macd, string malop)
+            public void InsertLop(string macd, string malop, string mand)
             {
                 SqlConnection sql = Provider.ConnectDatabase();
-                string strSQL = "proc_gvien26 @macd, @malop";
+                string strSQL = "proc_gvien26 @macd, @malop, @mand";
                 SqlCommand cm = new SqlCommand(strSQL, sql);
                 cm.Parameters.Add(new SqlParameter("@macd", macd));
                 cm.Parameters.Add(new SqlParameter("@malop", malop));
+                cm.Parameters.Add(new SqlParameter("@mand", mand));
 
 
-                cm.ExecuteNonQuery();
+
+            cm.ExecuteNonQuery();
             }
 
             public void DeleteLop(string macd, string malop)
@@ -607,17 +630,19 @@ namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
 
                 cm.ExecuteNonQuery();
             }
-            public void UpdateNhomVsSV(string macd, int sosv, int sonhom)
+            public void UpdateNhomVsSV(string macd, int sosv, int sonhom, string mand)
             {
                 SqlConnection sql = Provider.ConnectDatabase();
-                string strSQL = "proc_gvien29 @macd, @sonhom, @sosv";
+                string strSQL = "proc_gvien29 @macd, @sonhom, @sosv, @mand";
                 SqlCommand cm = new SqlCommand(strSQL, sql);
                 cm.Parameters.Add(new SqlParameter("@macd", macd));
                 cm.Parameters.Add(new SqlParameter("@sosv", sosv));
                 cm.Parameters.Add(new SqlParameter("@sonhom", sonhom));
+                cm.Parameters.Add(new SqlParameter("@mand", mand));
 
 
-                cm.ExecuteNonQuery();
+
+            cm.ExecuteNonQuery();
             }
             public void UpdateThongTinNguoiDung(string mand, string ten, string mail, DateTime ngay)
             {
