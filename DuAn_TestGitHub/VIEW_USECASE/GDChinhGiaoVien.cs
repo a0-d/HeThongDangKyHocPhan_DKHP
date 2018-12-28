@@ -8,15 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VIEW_BUS;
+using VIEW_BUS.DAO_GiaoVien.TTGiaoVien;
 
 namespace VIEW_USECASE
 {
     public partial class GDChinhGiaoVien : Form
     {
         string IDChuyenDe = "";
-        
-        public string IDNguoiDung = "ND06";
+
+        public string IDNguoiDung = "ND07";
         public GDChinhGiaoVien()
         {
             InitializeComponent();
@@ -37,16 +37,22 @@ namespace VIEW_USECASE
             panelChinh.Visible = true;
 
         }
+
         private void GDChinhGiaoVien_Load(object sender, EventArgs e)
         {
-            
+
 
             TTGiaoVien chuyende = new TTGiaoVien();
             DataTable dt = chuyende.LayDSChuyeDeDuocMo();
             DataTable dt1 = chuyende.LayDSChuyeDe();
-            DataTable dt2 = chuyende.LayDSChuyeDeDangDay();
+            DataTable dt2 = chuyende.LayDSChuyeDeDangDay(IDNguoiDung);
             DataTable dt3 = chuyende.LayDSChuyeDeDangDayCOLOP(IDNguoiDung);
-            chuyende.mand = IDNguoiDung;
+
+
+            chuyende.MaNguoiDung = IDNguoiDung;
+
+
+
             dataGridViewDangMo.DataSource = dt;
             dataGridViewCDAll.DataSource = dt1;
             dataGridViewDangDay.DataSource = dt3;
@@ -95,7 +101,7 @@ namespace VIEW_USECASE
                 panelChinh.Visible = false;
 
                 panelQT.Visible = false;
-                button_QT_LuuChinhSua.Enabled = false;                
+                button_QT_LuuChinhSua.Enabled = false;
                 panel_CapNhatSLLop.Visible = false;
                 gbxCapNhatSLLop.Visible = false;
                 panel_CapNhatSLSV_N.Visible = false;
@@ -118,7 +124,7 @@ namespace VIEW_USECASE
                 tb_QT_Email.Text = info.MailNguoiDungtxt(IDNguoiDung);
                 tb_QT_ThuocNganh.Text = info.NganhNguoiDungtxt(IDNguoiDung);
                 dateTimePickerNgCT.Value = info.NgayCTNguoiDungtxt(IDNguoiDung);
-                
+
             }
 
 
@@ -144,21 +150,18 @@ namespace VIEW_USECASE
         }
         private void LoadText()
         {
-            IDChuyenDe = dataGridViewDangDay.CurrentRow.Cells["macd"].Value.ToString();
+            IDChuyenDe = dataGridViewDangDay.CurrentRow.Cells["clMaCD"].Value.ToString();
         }
 
 
-        
+
         //Set Mã Dead Auto tăng dần
 
 
         private void txtMaDeadThem_Load(object sender, EventArgs e)
         {
-            TTGiaoVien max = new TTGiaoVien();
-            int x = max.GetMaxIDDEAD();
-            x++;
-            txtMaDeadThem.Text = Convert.ToString(x);
-            
+
+
         }
         private int checkmk()
         {
@@ -189,8 +192,8 @@ namespace VIEW_USECASE
 
         private void ComboxDead_Load(object sender, EventArgs e)
         {
-            TTGiaoVien orders = new TTGiaoVien();
-            DataTable dt = orders.DeadCombobox(cbLopCapNhatDead.Text);
+            TTGiaoVien a = new TTGiaoVien();
+            DataTable dt = a.DeadCombobox(cbLopCapNhatDead.Text);
 
             dt.Columns.Add("madead", typeof(string));
             dt.Dispose();
@@ -231,7 +234,7 @@ namespace VIEW_USECASE
             dt.Dispose();
             cbxTenCD.ValueMember = "tencd";
             cbxTenCD.DataSource = dt;
-            
+
         }
 
 
@@ -358,7 +361,7 @@ namespace VIEW_USECASE
                 }
                 else
                 {
-                    if(checkmk() == 1)
+                    if (checkmk() == 1)
                     {
 
                         TTGiaoVien updatemk = new TTGiaoVien();
@@ -395,12 +398,18 @@ namespace VIEW_USECASE
             panel_TraCuuDiem.Visible = true;
             panelTraCuuTTDK.Visible = false;
             panelChinh.Visible = false;
-
-            TTGiaoVien kq = new TTGiaoVien();
-            DataTable dt = kq.LayKetQuaDiem(txtMaSV.Text, cbxMaCDDiem.Text);
-
-
-            dataGridViewTraCuuDiem.DataSource = dt;
+            if (txtMaSV.Text == "")
+            {
+                TTGiaoVien kq = new TTGiaoVien();
+                DataTable dt = kq.LayKetQuaDiemKoSV(cbxMaCDDiem.Text);
+                dataGridViewTraCuuDiem.DataSource = dt;
+            }
+            else
+            {
+                TTGiaoVien kq = new TTGiaoVien();
+                DataTable dt = kq.LayKetQuaDiem(txtMaSV.Text, cbxMaCDDiem.Text);
+                dataGridViewTraCuuDiem.DataSource = dt;
+            }
         }
 
         private void btnTraCuuTTDK_act_Click(object sender, EventArgs e)
@@ -421,10 +430,14 @@ namespace VIEW_USECASE
             panel_TraCuuDiem.Visible = false;
             panelTraCuuTTDK.Visible = true;
             panelChinh.Visible = false;
-
+            if (cbxHocKiTTDK.Text == "" || cbxNamHocTTDK.Text == "")
+            {
+                MessageBox.Show("Bạn vui lòng chọn đủ thông tin!");
+                return;
+            }
 
             TTGiaoVien tt = new TTGiaoVien();
-            DataTable dt = tt.LayThongTinDangKy(cbxMaChuyenDeTTDK.Text,cbxNamHocTTDK.Text, Convert.ToInt32(cbxHocKiTTDK.Text),IDNguoiDung);
+            DataTable dt = tt.LayThongTinDangKy(cbxMaChuyenDeTTDK.Text, cbxNamHocTTDK.Text, Convert.ToInt32(cbxHocKiTTDK.Text), IDNguoiDung);
 
 
             dataGridViewTraCuuTTDK.DataSource = dt;
@@ -448,6 +461,8 @@ namespace VIEW_USECASE
             panel_TraCuuDiem.Visible = false;
             panelTraCuuTTDK.Visible = false;
             panelChinh.Visible = true;
+            panelSearch.Visible = false;
+            tabControl1.Visible = true;
 
         }
         private void button_QT_ChinhSua_Click(object sender, EventArgs e)
@@ -489,6 +504,7 @@ namespace VIEW_USECASE
             tb_QT_TenTK.ReadOnly = true;
             tb_QT_TenChuTK.ReadOnly = true;
             dateTimePickerNgCT.Enabled = false;
+            button_QT_LuuChinhSua.Enabled = false;
             tb_QT_Email.ReadOnly = true;
             panel_CapNhatSLSV_N.Visible = false;
             gbxCapNhatSLSV.Visible = false;
@@ -511,11 +527,11 @@ namespace VIEW_USECASE
             {
 
                 TTGiaoVien update = new TTGiaoVien();
-                update.UpdateThongTinNguoiDung(IDNguoiDung, tb_QT_TenChuTK.Text , tb_QT_Email.Text, dateTimePickerNgCT.Value);
+                update.UpdateThongTinNguoiDung(IDNguoiDung, tb_QT_TenChuTK.Text, tb_QT_Email.Text, dateTimePickerNgCT.Value);
                 MessageBox.Show("Đã Cập Nhật Thông Tin Thành công!");
             }
             GDChinhGiaoVien_Load(sender, e);
-            
+
         }
 
         private void button_QT_DoiMatKhau_Click(object sender, EventArgs e)
@@ -691,14 +707,14 @@ namespace VIEW_USECASE
             string tendead = txtTenDead.Text;
             DateTime thoihanThemDead = Convert.ToDateTime(dtThoiHanCapNhat.Text);
 
-            if (malop == "" ||tendead =="")
+            if (malop == "" || tendead == "")
             {
                 MessageBox.Show("Bạn chưa nhập đủ thông tin!");
             }
             else
             {
                 TTGiaoVien addDead = new TTGiaoVien();
-                addDead.UpdateDead( id, tendead, thoihanThemDead);
+                addDead.UpdateDead(id, tendead, thoihanThemDead, cbLopCapNhatDead.Text);
                 MessageBox.Show("Đã Cập Nhật Deadline thành công!");
             }
 
@@ -706,7 +722,7 @@ namespace VIEW_USECASE
 
         private void btnCapNhatNhom_Click(object sender, EventArgs e)
         {
-            if (txtTenCDCNSV.Text == "" || txtSinhVienCN.Text == "" || txtNhomCapNhat.Text == "")
+            if (txtSinhVienCN.Text == "" || txtNhomCapNhat.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập đủ thông tin!");
             }
@@ -718,6 +734,7 @@ namespace VIEW_USECASE
                 MessageBox.Show("Đã Cập Nhật Thông Tin Thành công!");
             }
             GDChinhGiaoVien_Load(sender, e);
+            btnVeTrangChu_Click(sender, e);
 
         }
 
@@ -731,79 +748,49 @@ namespace VIEW_USECASE
 
             int solop = Convert.ToInt32(txtSLSVCNLop.Text);
             string lopid;
-            string temp1 = IDChuyenDe.Replace(" ", "") + solopcu.ToString();
+            if (solop > 20)
+            {
+                MessageBox.Show("Số lượng lớp phải nhỏ hơn 20!");
+                return;
+            }
+            if (solop <= 0)
+            {
+                MessageBox.Show("Số lượng lớp lớn hơn 0!");
+                return;
+
+            }
             if (solop > solopcu)
             {
                 while (solop != temp)
                 {
                     temp++;
-                    lopid = tenlop.Replace(temp1, "");
-                    lopid = lopid.Replace(" ", "") + IDChuyenDe.Replace(" ", "") + temp;
+                    lopid = tenlop.Replace(IDChuyenDe + solopcu.ToString(), "");
+                    lopid = lopid.Replace(" ", "") + IDChuyenDe + temp;
                     a.InsertLop(IDChuyenDe, lopid);
                 }
             }
-            if(solop < solopcu)
+            if (solop < solopcu)
             {
                 while (solop != temp)
                 {
-                    lopid = tenlop.Replace(solopcu.ToString(), "");
-                    lopid = lopid.Replace(" ", "") + temp;
-                    
+                    lopid = tenlop.Replace(IDChuyenDe + solopcu.ToString(), "");
+                    lopid = lopid.Replace(" ", "") + IDChuyenDe + temp;
+
                     a.DeleteLop(IDChuyenDe, lopid);
                     temp--;
 
                 }
+
             }
+
+
             MessageBox.Show("Số Lượng Lớp Đã Được Cập Nhật!");
 
             GDChinhGiaoVien_Load(sender, e);
+            btnVeTrangChu_Click(sender, e);
         }
 
         private void btnThemCDKhaNang_Click(object sender, EventArgs e)
-        {
-            if (cbxTenCD.Text == "" )
-            {
-                MessageBox.Show("Bạn chưa chọn tên chuyên đề!");
-            }
-            else
-            {
-               
-
-                TTGiaoVien khanang = new TTGiaoVien();
-                int temp = khanang.CheckKhaNang(IDNguoiDung, cbxTenCD.Text);
-                if (khanang.CheckKhaNang(IDNguoiDung, cbxTenCD.Text) == 1)
-                {
-                    MessageBox.Show("Giáo Viên Đã Có Sẵn Khả Năng Dạy Môn Học Này!");
-
-                }
-                else {
-                    khanang.InsertKhaNang(cbxTenCD.Text, IDNguoiDung);
-                    MessageBox.Show("Đã Thêm Thông Tin Thành công!");
-                }
-                
-            }
-            GDChinhGiaoVien_Load(sender, e);
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            panelSearch.Visible = true;
-
-            TTGiaoVien tt = new TTGiaoVien();
-            DataTable dt = tt.LayThongTinTimKiem(txtSearch.Text);
-
-
-            dataGridViewSearch.DataSource = dt;
-        }
-
-        private void cbMaDead_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TTGiaoVien ma = new TTGiaoVien();
-            txtTenDead.Text = ma.LayTenDead(cbMaDead.Text);
-            dtThoiHanCapNhat.Value = ma.LayThoiHanDead(cbMaDead.Text);
-        }
-
-        private void btnXoaCDKhaNang_Click(object sender, EventArgs e)
         {
             if (cbxTenCD.Text == "")
             {
@@ -815,6 +802,59 @@ namespace VIEW_USECASE
 
                 TTGiaoVien khanang = new TTGiaoVien();
                 int temp = khanang.CheckKhaNang(IDNguoiDung, cbxTenCD.Text);
+                if (khanang.CheckKhaNang(IDNguoiDung, cbxTenCD.Text) == 1)
+                {
+                    MessageBox.Show("Giáo Viên Đã Có Sẵn Khả Năng Dạy Môn Học Này!");
+
+                }
+                else
+                {
+                    khanang.InsertKhaNang(cbxTenCD.Text, IDNguoiDung);
+                    MessageBox.Show("Đã Thêm Thông Tin Thành công!");
+                }
+
+            }
+            GDChinhGiaoVien_Load(sender, e);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            panelSearch.Visible = true;
+            tabControl1.Visible = false;
+            TTGiaoVien tt = new TTGiaoVien();
+            DataTable dt = tt.LayThongTinTimKiem(txtSearch.Text);
+
+
+            dataGridViewSearch.DataSource = dt;
+            if (dataGridViewSearch.RowCount == 1)
+            {
+                MessageBox.Show("Dữ liệu cần tìm không có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void cbMaDead_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TTGiaoVien ma = new TTGiaoVien();
+            txtTenDead.Text = ma.LayTenDead(cbMaDead.Text, cbLopCapNhatDead.Text);
+            dtThoiHanCapNhat.Value = ma.LayThoiHanDead(cbMaDead.Text, cbLopCapNhatDead.Text);
+        }
+
+        private void btnXoaCDKhaNang_Click(object sender, EventArgs e)
+        {
+            if (cbxTenCD.Text == "")
+            {
+                MessageBox.Show("Bạn chưa chọn tên chuyên đề!");
+            }
+            else
+            {
+
+                TTGiaoVien khanang = new TTGiaoVien();
+                int temp = khanang.CheckKhaNangXoa(IDNguoiDung, cbxTenCD.Text);
+                if (khanang.CheckKhaNangXoa(IDNguoiDung, cbxTenCD.Text) == 1)
+                {
+                    MessageBox.Show("Không thể xóa môn học này trong khả năng, vì bạn đang có lớp môn này!");
+                    return;
+                }
                 if (khanang.CheckKhaNang(IDNguoiDung, cbxTenCD.Text) == 0)
                 {
                     MessageBox.Show("Giáo Viên Chưa Có Sẵn Khả Năng Dạy Môn Học Này!");
@@ -828,6 +868,74 @@ namespace VIEW_USECASE
 
             }
             GDChinhGiaoVien_Load(sender, e);
+        }
+
+        private void cbChonLopThemDead_TextChanged(object sender, EventArgs e)
+        {
+            TTGiaoVien max = new TTGiaoVien();
+            int x = max.GetMaxIDDEAD(cbChonLopThemDead.Text);
+            x++;
+            txtMaDeadThem.Text = Convert.ToString(x);
+        }
+
+
+        private void cbLopCapNhatDead_TextChanged(object sender, EventArgs e)
+        {
+            cbMaDead.Text = "1";
+            TTGiaoVien ma = new TTGiaoVien();
+            txtTenDead.Text = ma.LayTenDead("1", cbLopCapNhatDead.Text);
+            dtThoiHanCapNhat.Value = ma.LayThoiHanDead("1", cbLopCapNhatDead.Text);
+        }
+
+        private void GDChinhGiaoVien_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (panelChinh.Visible == true)
+                {
+                    btnSearch_Click(sender, e);
+                    return;
+                }
+                if (groupBoxTraCuuTTDK.Visible == true)
+                {
+                    btnTraCuuTTDK_act_Click(sender, e);
+                    return;
+                }
+                if (groupBoxTraCuuDiem.Visible == true)
+                {
+                    btnTraCuuDiem_act_Click(sender, e);
+                    return;
+                }
+                if (gbxKhaNang.Visible == true)
+                {
+                    btnThemCDKhaNang_Click(sender, e);
+                    return;
+                }
+                if (panelThemDead.Visible == true)
+                {
+                    btnCapNhatThemDead_Click(sender, e);
+                    return;
+                }
+                if (panel_CapNhatDead.Visible == true)
+                {
+                    btnUpdateDead_Click(sender, e);
+                    return;
+                }
+
+                if (panel_CapNhatSLSV_N.Visible == true)
+                {
+                    btnCapNhatNhom_Click(sender, e);
+                    return;
+                }
+                if (panel_CapNhatSLLop.Visible == true)
+                {
+                    btnCapNhatLH_Click(sender, e);
+                    return;
+                }
+
+
+            }
         }
     }
 }
