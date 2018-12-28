@@ -43,9 +43,6 @@
             this.rdoVoHieuHoa = new System.Windows.Forms.RadioButton();
             this.cbbThuocNganh = new MetroFramework.Controls.MetroComboBox();
             this.lbNote = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.btnThemChuyenDe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdoMo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdoVoHieuHoa)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThemChuyenDe
@@ -58,6 +55,7 @@
             this.btnThemChuyenDe.Size = new System.Drawing.Size(241, 60);
             this.btnThemChuyenDe.TabIndex = 5;
             this.btnThemChuyenDe.Text = "Thêm chuyên đề";
+            this.btnThemChuyenDe.UseVisualStyleBackColor = false;
             this.btnThemChuyenDe.Click += new System.EventHandler(this.btnThemChuyenDe_Click);
             // 
             // label1
@@ -189,18 +187,19 @@
             this.rdoMo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.rdoMo.Location = new System.Drawing.Point(366, 215);
             this.rdoMo.Name = "rdoMo";
-            this.rdoMo.Size = new System.Drawing.Size(46, 25);
+            this.rdoMo.Size = new System.Drawing.Size(70, 25);
             this.rdoMo.TabIndex = 2;
-            this.rdoMo.TabStop = false;
             this.rdoMo.Text = "Mở";
             // 
             // rdoVoHieuHoa
             // 
+            this.rdoVoHieuHoa.Checked = true;
             this.rdoVoHieuHoa.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.rdoVoHieuHoa.Location = new System.Drawing.Point(457, 215);
             this.rdoVoHieuHoa.Name = "rdoVoHieuHoa";
             this.rdoVoHieuHoa.Size = new System.Drawing.Size(109, 25);
             this.rdoVoHieuHoa.TabIndex = 3;
+            this.rdoVoHieuHoa.TabStop = true;
             this.rdoVoHieuHoa.Text = "Vô hiệu hoá";
             // 
             // cbbThuocNganh
@@ -252,9 +251,6 @@
             this.Name = "ThemChuyenDe";
             this.Text = "ThemChuyenDe";
             this.Load += new System.EventHandler(this.ThemChuyenDe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btnThemChuyenDe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdoMo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdoVoHieuHoa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,26 +30,26 @@
         {
             this.btnLuuThayDoi = new System.Windows.Forms.Button();
             this.radGroupBox1 = new System.Windows.Forms.GroupBox();
+            this.SLL = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
             this.cbbTenBatDau = new System.Windows.Forms.ComboBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.SLSV1Nhom = new System.Windows.Forms.NumericUpDown();
-            this.SLNhom = new System.Windows.Forms.NumericUpDown();
-            this.SLSV1Lop = new System.Windows.Forms.NumericUpDown();
+            this.SLSVTD1N = new System.Windows.Forms.NumericUpDown();
+            this.SLNTD = new System.Windows.Forms.NumericUpDown();
+            this.SLSV1L = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.SLLop = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tbThuocNganh = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.tbMaCD = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,13 +59,11 @@
             this.cbbNamHoc = new System.Windows.Forms.ComboBox();
             this.cbbHocKi = new System.Windows.Forms.ComboBox();
             this.lbNote = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLuuThayDoi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SLSV1Nhom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLNhom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLSV1Lop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLLop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SLL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SLSVTD1N)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SLNTD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SLSV1L)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLuuThayDoi
@@ -78,87 +76,130 @@
             this.btnLuuThayDoi.Size = new System.Drawing.Size(241, 60);
             this.btnLuuThayDoi.TabIndex = 40;
             this.btnLuuThayDoi.Text = "Lưu thay đổi";
+            this.btnLuuThayDoi.UseVisualStyleBackColor = false;
+            this.btnLuuThayDoi.Click += new System.EventHandler(this.btnLuuThayDoi_Click);
             // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radGroupBox1.Controls.Add(this.SLL);
+            this.radGroupBox1.Controls.Add(this.label20);
             this.radGroupBox1.Controls.Add(this.cbbTenBatDau);
-            this.radGroupBox1.Controls.Add(this.metroLabel1);
-            this.radGroupBox1.Controls.Add(this.SLSV1Nhom);
-            this.radGroupBox1.Controls.Add(this.SLNhom);
-            this.radGroupBox1.Controls.Add(this.SLSV1Lop);
+            this.radGroupBox1.Controls.Add(this.SLSVTD1N);
+            this.radGroupBox1.Controls.Add(this.SLNTD);
+            this.radGroupBox1.Controls.Add(this.SLSV1L);
+            this.radGroupBox1.Controls.Add(this.label19);
             this.radGroupBox1.Controls.Add(this.label17);
             this.radGroupBox1.Controls.Add(this.label15);
             this.radGroupBox1.Controls.Add(this.label2);
             this.radGroupBox1.Controls.Add(this.label16);
             this.radGroupBox1.Controls.Add(this.label13);
+            this.radGroupBox1.Controls.Add(this.label18);
             this.radGroupBox1.Controls.Add(this.label14);
             this.radGroupBox1.Controls.Add(this.label4);
             this.radGroupBox1.Controls.Add(this.label6);
             this.radGroupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.radGroupBox1.ForeColor = System.Drawing.Color.Red;
-            //this.radGroupBox1.HeaderText = "Thông tin lớp";
             this.radGroupBox1.Location = new System.Drawing.Point(164, 193);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(980, 229);
             this.radGroupBox1.TabIndex = 39;
+            this.radGroupBox1.TabStop = false;
             this.radGroupBox1.Text = "Thông tin lớp";
+            // 
+            // SLL
+            // 
+            this.SLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.SLL.Location = new System.Drawing.Point(160, 40);
+            this.SLL.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.SLL.Name = "SLL";
+            this.SLL.Size = new System.Drawing.Size(120, 30);
+            this.SLL.TabIndex = 42;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(345, 75);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(270, 21);
+            this.label20.TabIndex = 41;
+            this.label20.Text = "Tên lớp sẽ là \"Tên bắt đầu\" + số thứ tự";
             // 
             // cbbTenBatDau
             // 
+            this.cbbTenBatDau.Enabled = false;
             this.cbbTenBatDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbTenBatDau.FormattingEnabled = true;
             this.cbbTenBatDau.ItemHeight = 25;
-            this.cbbTenBatDau.Location = new System.Drawing.Point(237, 48);
+            this.cbbTenBatDau.Location = new System.Drawing.Point(465, 39);
             this.cbbTenBatDau.Name = "cbbTenBatDau";
-            this.cbbTenBatDau.Size = new System.Drawing.Size(250, 33);
-            this.cbbTenBatDau.TabIndex = 25;
+            this.cbbTenBatDau.Size = new System.Drawing.Size(150, 33);
+            this.cbbTenBatDau.TabIndex = 40;
             // 
-            // metroLabel1
+            // SLSVTD1N
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.metroLabel1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.metroLabel1.Location = new System.Drawing.Point(118, 95);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(231, 19);
-            this.metroLabel1.TabIndex = 22;
-            this.metroLabel1.Text = "Tên lớp sẽ là \"Tên bắt đầu\" + số thứ tự";
+            this.SLSVTD1N.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SLSVTD1N.Location = new System.Drawing.Point(748, 159);
+            this.SLSVTD1N.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.SLSVTD1N.Name = "SLSVTD1N";
+            this.SLSVTD1N.Size = new System.Drawing.Size(120, 30);
+            this.SLSVTD1N.TabIndex = 37;
             // 
-            // SLSV1Nhom
+            // SLNTD
             // 
-            this.SLSV1Nhom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SLSV1Nhom.Location = new System.Drawing.Point(736, 158);
-            this.SLSV1Nhom.Name = "SLSV1Nhom";
-            this.SLSV1Nhom.Size = new System.Drawing.Size(120, 30);
-            this.SLSV1Nhom.TabIndex = 22;
+            this.SLNTD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SLNTD.Location = new System.Drawing.Point(237, 159);
+            this.SLNTD.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.SLNTD.Name = "SLNTD";
+            this.SLNTD.Size = new System.Drawing.Size(120, 30);
+            this.SLNTD.TabIndex = 38;
             // 
-            // SLNhom
+            // SLSV1L
             // 
-            this.SLNhom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SLNhom.Location = new System.Drawing.Point(237, 158);
-            this.SLNhom.Name = "SLNhom";
-            this.SLNhom.Size = new System.Drawing.Size(120, 30);
-            this.SLNhom.TabIndex = 22;
+            this.SLSV1L.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SLSV1L.Location = new System.Drawing.Point(832, 42);
+            this.SLSV1L.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.SLSV1L.Name = "SLSV1L";
+            this.SLSV1L.Size = new System.Drawing.Size(120, 30);
+            this.SLSV1L.TabIndex = 39;
             // 
-            // SLSV1Lop
+            // label19
             // 
-            this.SLSV1Lop.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SLSV1Lop.Location = new System.Drawing.Point(736, 49);
-            this.SLSV1Lop.Name = "SLSV1Lop";
-            this.SLSV1Lop.Size = new System.Drawing.Size(120, 30);
-            this.SLSV1Lop.TabIndex = 22;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(129, 46);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(25, 20);
+            this.label19.TabIndex = 32;
+            this.label19.Text = "(*)";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(707, 162);
+            this.label17.Location = new System.Drawing.Point(719, 163);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(25, 20);
-            this.label17.TabIndex = 20;
+            this.label17.TabIndex = 33;
             this.label17.Text = "(*)";
             // 
             // label15
@@ -166,10 +207,10 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(208, 162);
+            this.label15.Location = new System.Drawing.Point(208, 163);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(25, 20);
-            this.label15.TabIndex = 20;
+            this.label15.TabIndex = 34;
             this.label15.Text = "(*)";
             // 
             // label2
@@ -177,10 +218,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(114, 53);
+            this.label2.Location = new System.Drawing.Point(342, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
-            this.label2.TabIndex = 19;
+            this.label2.TabIndex = 27;
             this.label2.Text = "Tên bắt đầu";
             // 
             // label16
@@ -188,10 +229,10 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(581, 162);
+            this.label16.Location = new System.Drawing.Point(593, 163);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(131, 20);
-            this.label16.TabIndex = 19;
+            this.label16.TabIndex = 28;
             this.label16.Text = "SV tối đa 1 nhóm";
             // 
             // label13
@@ -199,21 +240,32 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(707, 53);
+            this.label13.Location = new System.Drawing.Point(803, 46);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(25, 20);
-            this.label13.TabIndex = 20;
+            this.label13.TabIndex = 35;
             this.label13.Text = "(*)";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(29, 48);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(97, 20);
+            this.label18.TabIndex = 29;
+            this.label18.Text = "Số lượng lớp";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(49, 162);
+            this.label14.Location = new System.Drawing.Point(49, 163);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(159, 20);
-            this.label14.TabIndex = 19;
+            this.label14.TabIndex = 30;
             this.label14.Text = "Số lượng nhóm tối đa";
             // 
             // label4
@@ -221,10 +273,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(208, 53);
+            this.label4.Location = new System.Drawing.Point(436, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 20);
-            this.label4.TabIndex = 20;
+            this.label4.TabIndex = 36;
             this.label4.Text = "(*)";
             // 
             // label6
@@ -232,37 +284,18 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(573, 53);
+            this.label6.Location = new System.Drawing.Point(669, 46);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 20);
-            this.label6.TabIndex = 19;
+            this.label6.TabIndex = 31;
             this.label6.Text = "Số lượng sinh viên";
-            // 
-            // SLLop
-            // 
-            this.SLLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SLLop.Location = new System.Drawing.Point(1024, 136);
-            this.SLLop.Name = "SLLop";
-            this.SLLop.Size = new System.Drawing.Size(120, 30);
-            this.SLLop.TabIndex = 38;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(995, 140);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(25, 20);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "(*)";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(578, 140);
+            this.label10.Location = new System.Drawing.Point(808, 129);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(25, 20);
             this.label10.TabIndex = 33;
@@ -273,7 +306,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(135, 140);
+            this.label8.Location = new System.Drawing.Point(365, 129);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(25, 20);
             this.label8.TabIndex = 35;
@@ -310,16 +343,6 @@
             this.label5.TabIndex = 31;
             this.label5.Text = "Thuộc ngành";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(901, 140);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 20);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Số lượng lớp";
-            // 
             // tbMaCD
             // 
             this.tbMaCD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -345,7 +368,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(521, 140);
+            this.label9.Location = new System.Drawing.Point(751, 129);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 20);
             this.label9.TabIndex = 29;
@@ -365,7 +388,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(61, 140);
+            this.label7.Location = new System.Drawing.Point(291, 129);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 20);
             this.label7.TabIndex = 27;
@@ -404,22 +427,24 @@
             // 
             // cbbNamHoc
             // 
+            this.cbbNamHoc.Enabled = false;
             this.cbbNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbNamHoc.FormattingEnabled = true;
             this.cbbNamHoc.ItemHeight = 25;
-            this.cbbNamHoc.Location = new System.Drawing.Point(164, 135);
+            this.cbbNamHoc.Location = new System.Drawing.Point(394, 124);
             this.cbbNamHoc.Name = "cbbNamHoc";
-            this.cbbNamHoc.Size = new System.Drawing.Size(250, 33);
+            this.cbbNamHoc.Size = new System.Drawing.Size(206, 33);
             this.cbbNamHoc.TabIndex = 25;
             // 
             // cbbHocKi
             // 
+            this.cbbHocKi.Enabled = false;
             this.cbbHocKi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbHocKi.FormattingEnabled = true;
             this.cbbHocKi.ItemHeight = 25;
-            this.cbbHocKi.Location = new System.Drawing.Point(607, 135);
+            this.cbbHocKi.Location = new System.Drawing.Point(837, 124);
             this.cbbHocKi.Name = "cbbHocKi";
-            this.cbbHocKi.Size = new System.Drawing.Size(250, 33);
+            this.cbbHocKi.Size = new System.Drawing.Size(195, 33);
             this.cbbHocKi.TabIndex = 25;
             // 
             // lbNote
@@ -442,13 +467,10 @@
             this.Controls.Add(this.cbbNamHoc);
             this.Controls.Add(this.btnLuuThayDoi);
             this.Controls.Add(this.radGroupBox1);
-            this.Controls.Add(this.SLLop);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tbThuocNganh);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.tbMaCD);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
@@ -457,14 +479,12 @@
             this.Controls.Add(this.label1);
             this.Name = "CapNhatChuyenDeDangDuocMo";
             this.Text = "CapNhatChuyenDeDangDuocMo";
-            ((System.ComponentModel.ISupportInitialize)(this.btnLuuThayDoi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SLSV1Nhom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLNhom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLSV1Lop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLLop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SLL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SLSVTD1N)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SLNTD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SLSV1L)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,34 +494,34 @@
 
         private System.Windows.Forms.Button btnLuuThayDoi;
         private System.Windows.Forms.GroupBox radGroupBox1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.NumericUpDown SLSV1Nhom;
-        private System.Windows.Forms.NumericUpDown SLNhom;
-        private System.Windows.Forms.NumericUpDown SLSV1Lop;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown SLLop;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuMaterialTextbox tbThuocNganh;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuMaterialTextbox tbMaCD;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuMaterialTextbox tbTenCD;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbbTenBatDau;
         private System.Windows.Forms.ComboBox cbbNamHoc;
         private System.Windows.Forms.ComboBox cbbHocKi;
         private System.Windows.Forms.Label lbNote;
+        private System.Windows.Forms.NumericUpDown SLL;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox cbbTenBatDau;
+        private System.Windows.Forms.NumericUpDown SLSVTD1N;
+        private System.Windows.Forms.NumericUpDown SLNTD;
+        private System.Windows.Forms.NumericUpDown SLSV1L;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }

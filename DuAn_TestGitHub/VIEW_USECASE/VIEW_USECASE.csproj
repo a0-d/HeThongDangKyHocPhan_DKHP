@@ -64,29 +64,41 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChonLoaiTaiKhoan_DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonLoaiTaiKhoan_DangKy.Designer.cs">
+      <DependentUpon>ChonLoaiTaiKhoan_DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyGVGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyGVGV.Designer.cs">
+      <DependentUpon>DangKyGVGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangKySV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKySV.Designer.cs">
+      <DependentUpon>DangKySV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGiaoVu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmGiaoVu.Designer.cs">
       <DependentUpon>FrmGiaoVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLOGIN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLOGIN.Designer.cs">
-      <DependentUpon>FrmLOGIN.cs</DependentUpon>
-    </Compile>
     <Compile Include="GDChinhGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GDChinhGiaoVien.Designer.cs">
       <DependentUpon>GDChinhGiaoVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GDChinhGiaoVu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GDChinhGiaoVu.Designer.cs">
-      <DependentUpon>GDChinhGiaoVu.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoVu\CapNhatChuyenDeDangDuocMo.cs">
       <SubType>Form</SubType>
@@ -99,6 +111,18 @@
     </Compile>
     <Compile Include="GiaoVu\CapNhatGiaoVienPhuTrach.Designer.cs">
       <DependentUpon>CapNhatGiaoVienPhuTrach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\CapNhatThongTinLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\CapNhatThongTinLop.Designer.cs">
+      <DependentUpon>CapNhatThongTinLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoVu\MoChuyenDe.cs">
       <SubType>Form</SubType>
@@ -118,11 +142,17 @@
     <Compile Include="GiaoVu\ThemChuyenDe.Designer.cs">
       <DependentUpon>ThemChuyenDe.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoVu\TraCuu\TraCuuDiem.cs">
+    <Compile Include="GiaoVu\TraCuu\ContentTraCuuDiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoVu\TraCuu\TraCuuDiem.Designer.cs">
-      <DependentUpon>TraCuuDiem.cs</DependentUpon>
+    <Compile Include="GiaoVu\TraCuu\ContentTraCuuDiem.Designer.cs">
+      <DependentUpon>ContentTraCuuDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\TraCuu\ContentTraCuuTTDK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\TraCuu\ContentTraCuuTTDK.Designer.cs">
+      <DependentUpon>ContentTraCuuTTDK.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoVu\TraCuu\TraCuuThongTinDangKy.cs">
       <SubType>Form</SubType>
@@ -132,23 +162,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuenMatKhau.Designer.cs">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChonLoaiTaiKhoan_DangKy.resx">
+      <DependentUpon>ChonLoaiTaiKhoan_DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyGVGV.resx">
+      <DependentUpon>DangKyGVGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKySV.resx">
+      <DependentUpon>DangKySV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGiaoVu.resx">
       <DependentUpon>FrmGiaoVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLOGIN.resx">
-      <DependentUpon>FrmLOGIN.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GDChinhGiaoVien.resx">
       <DependentUpon>GDChinhGiaoVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GDChinhGiaoVu.resx">
-      <DependentUpon>GDChinhGiaoVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoVu\CapNhatChuyenDeDangDuocMo.resx">
       <DependentUpon>CapNhatChuyenDeDangDuocMo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoVu\CapNhatGiaoVienPhuTrach.resx">
       <DependentUpon>CapNhatGiaoVienPhuTrach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\CapNhatThongTinLop.resx">
+      <DependentUpon>CapNhatThongTinLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoVu\MoChuyenDe.resx">
       <DependentUpon>MoChuyenDe.cs</DependentUpon>
@@ -159,8 +207,11 @@
     <EmbeddedResource Include="GiaoVu\ThemChuyenDe.resx">
       <DependentUpon>ThemChuyenDe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiaoVu\TraCuu\TraCuuDiem.resx">
-      <DependentUpon>TraCuuDiem.cs</DependentUpon>
+    <EmbeddedResource Include="GiaoVu\TraCuu\ContentTraCuuDiem.resx">
+      <DependentUpon>ContentTraCuuDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\TraCuu\ContentTraCuuTTDK.resx">
+      <DependentUpon>ContentTraCuuTTDK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoVu\TraCuu\TraCuuThongTinDangKy.resx">
       <DependentUpon>TraCuuThongTinDangKy.cs</DependentUpon>
@@ -175,6 +226,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuenMatKhau.resx">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -188,7 +242,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ICO\Graphicloads-100-Flat-Home.ico" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VIEW_BUS\VIEW_BUS.csproj">
       <Project>{37587069-d355-4b6e-a055-8c890e375703}</Project>

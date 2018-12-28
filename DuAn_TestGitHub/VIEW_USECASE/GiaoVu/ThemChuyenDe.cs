@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VIEW_DTO.DaoData;
+using VIEW_BUS.DaoData;
 using VIEW_DTO.TT_TatCaChuyenDe;
 
 namespace VIEW_USECASE.GiaoVu
@@ -19,22 +19,15 @@ namespace VIEW_USECASE.GiaoVu
         {
             InitializeComponent();
         }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void ThemChuyenDe_Load(object sender, EventArgs e)
         {
-            //TTGiaoVu tuongtac = new TTGiaoVu();
-
-            //DataTable dt = new DataTable();
-            ////dt = tuongtac.DSChuyenDeThuocNganh();
-            //dt.Columns.Add("tennganh", typeof(string));
-            //dt.Dispose();
-            //cbbThuocNganh.ValueMember = "tennganh";
-            //cbbThuocNganh.DataSource = dt;
+            var ds = Dao_GiaoVu.DSNganh();
+            foreach(var tt in ds)
+            {
+                cbbThuocNganh.Items.Add(tt.tennganh);
+            }
         }
 
         private void btnThemChuyenDe_Click(object sender, EventArgs e)

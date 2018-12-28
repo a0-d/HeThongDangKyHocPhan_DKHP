@@ -45,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbbLop = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLuuThayDoi)).BeginInit();
             this.SuspendLayout();
             // 
             // tbThuocNganh
@@ -228,12 +227,6 @@
             // 
             this.cbbGiaoVienPhuTrach.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbGiaoVienPhuTrach.FormattingEnabled = true;
-            this.cbbGiaoVienPhuTrach.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c",
-            "d",
-            "e"});
             this.cbbGiaoVienPhuTrach.Location = new System.Drawing.Point(886, 249);
             this.cbbGiaoVienPhuTrach.Name = "cbbGiaoVienPhuTrach";
             this.cbbGiaoVienPhuTrach.Size = new System.Drawing.Size(319, 46);
@@ -249,6 +242,8 @@
             this.btnLuuThayDoi.Size = new System.Drawing.Size(241, 60);
             this.btnLuuThayDoi.TabIndex = 50;
             this.btnLuuThayDoi.Text = "Lưu thay đổi";
+            this.btnLuuThayDoi.UseVisualStyleBackColor = false;
+            this.btnLuuThayDoi.Click += new System.EventHandler(this.btnLuuThayDoi_Click);
             // 
             // label2
             // 
@@ -273,14 +268,9 @@
             // 
             // cbbLop
             // 
+            this.cbbLop.Enabled = false;
             this.cbbLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLop.FormattingEnabled = true;
-            this.cbbLop.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c",
-            "d",
-            "e"});
             this.cbbLop.Location = new System.Drawing.Point(207, 249);
             this.cbbLop.Name = "cbbLop";
             this.cbbLop.Size = new System.Drawing.Size(319, 46);
@@ -311,7 +301,6 @@
             this.Controls.Add(this.label1);
             this.Name = "CapNhatGiaoVienPhuTrach";
             this.Text = "CapNhatGiaoVienPhuTrach";
-            ((System.ComponentModel.ISupportInitialize)(this.btnLuuThayDoi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

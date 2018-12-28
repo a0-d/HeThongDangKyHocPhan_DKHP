@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VIEW_DTO.DaoData;
+using VIEW_BUS.DaoData;
 using VIEW_DTO.TT_TatCaChuyenDe;
 
 namespace VIEW_USECASE.GiaoVu

@@ -34,14 +34,13 @@
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label4 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbTenCD = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
+            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.groupBox5.SuspendLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.btnTraCuu)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox5
@@ -98,6 +97,7 @@
             this.btnTraCuu.Size = new System.Drawing.Size(130, 47);
             this.btnTraCuu.TabIndex = 4;
             this.btnTraCuu.Text = "Tra cứu";
+            this.btnTraCuu.UseVisualStyleBackColor = false;
             this.btnTraCuu.Click += new System.EventHandler(this.btnTraCuu_Click);
             // 
             // bunifuMaterialTextbox3
@@ -129,26 +129,6 @@
             this.label4.Size = new System.Drawing.Size(103, 17);
             this.label4.TabIndex = 30;
             this.label4.Text = "Tên chuyên đề";
-            // 
-            // bunifuMaterialTextbox1
-            // 
-            this.bunifuMaterialTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Red;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(481, 37);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(164, 32);
-            this.bunifuMaterialTextbox1.TabIndex = 1;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label2
             // 
@@ -220,6 +200,26 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Mã sinh viên";
             // 
+            // bunifuMaterialTextbox1
+            // 
+            this.bunifuMaterialTextbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
+            this.bunifuMaterialTextbox1.HintText = "";
+            this.bunifuMaterialTextbox1.isPassword = false;
+            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Blue;
+            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Red;
+            this.bunifuMaterialTextbox1.LineThickness = 3;
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(481, 37);
+            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(164, 32);
+            this.bunifuMaterialTextbox1.TabIndex = 1;
+            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // TraCuuThongTinDangKy
             // 
             this.AcceptButton = this.btnTraCuu;
@@ -232,7 +232,6 @@
             this.Text = "TraCuuThongTinDangKy";
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            //((System.ComponentModel.ISupportInitialize)(this.btnTraCuu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,11 +244,11 @@
         private System.Windows.Forms.Button btnTraCuu;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuMaterialTextbox tbTenCD;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
     }
 }

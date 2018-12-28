@@ -43,9 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnThemChuyenDe = new System.Windows.Forms.Button();
             this.lbNote = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.rdoVoHieuHoa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdoMo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnThemChuyenDe)).BeginInit();
             this.SuspendLayout();
             // 
             // cbbThuocNganh
@@ -71,7 +68,6 @@
             this.rdoVoHieuHoa.Name = "rdoVoHieuHoa";
             this.rdoVoHieuHoa.Size = new System.Drawing.Size(109, 25);
             this.rdoVoHieuHoa.TabIndex = 13;
-            this.rdoVoHieuHoa.TabStop = false;
             this.rdoVoHieuHoa.Text = "Vô hiệu hoá";
             // 
             // rdoMo
@@ -79,7 +75,7 @@
             this.rdoMo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.rdoMo.Location = new System.Drawing.Point(366, 215);
             this.rdoMo.Name = "rdoMo";
-            this.rdoMo.Size = new System.Drawing.Size(46, 25);
+            this.rdoMo.Size = new System.Drawing.Size(65, 25);
             this.rdoMo.TabIndex = 12;
             this.rdoMo.Text = "Mở";
             // 
@@ -218,6 +214,7 @@
             this.btnThemChuyenDe.Size = new System.Drawing.Size(241, 60);
             this.btnThemChuyenDe.TabIndex = 19;
             this.btnThemChuyenDe.Text = "Lưu thay đổi";
+            this.btnThemChuyenDe.UseVisualStyleBackColor = false;
             this.btnThemChuyenDe.Click += new System.EventHandler(this.btnThemChuyenDe_Click);
             // 
             // lbNote
@@ -254,9 +251,6 @@
             this.Name = "SuaChuyenDe";
             this.Text = "SuaChuyenDe";
             this.Load += new System.EventHandler(this.SuaChuyenDe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.rdoVoHieuHoa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rdoMo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnThemChuyenDe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

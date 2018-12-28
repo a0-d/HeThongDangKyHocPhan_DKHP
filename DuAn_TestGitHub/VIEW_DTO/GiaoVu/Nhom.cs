@@ -12,12 +12,14 @@ namespace VIEW_DTO.TT_TatCaChuyenDe
         public string malop;
         public string manhom;
         public int sosvddk;
-        static int i0 = 0, i1 = 1, i2 = 2;
+        public int sosvtoida1nhom;
+        static int i0 = 0, i1 = 1, i2 = 2, i3 = 3;
         public Nhom()
         {
             malop = "";
             manhom = "";
             sosvddk = 0;
+            sosvtoida1nhom = 0;
         }
         public static Nhom ReadNhom(SqlDataReader reader)
         {
@@ -25,7 +27,8 @@ namespace VIEW_DTO.TT_TatCaChuyenDe
             {
                 malop = reader.GetString(i0),
                 manhom = reader.GetString(i1),
-                sosvddk = reader.GetInt32(i2)
+                sosvddk = reader.GetInt32(i2),
+                sosvtoida1nhom = reader.GetInt32(i3)
             };
             return qq;
         }

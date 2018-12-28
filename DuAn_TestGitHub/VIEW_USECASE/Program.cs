@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1;
 
 namespace VIEW_USECASE
 {
@@ -16,10 +18,11 @@ namespace VIEW_USECASE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GDChinhGiaoVien());
+            //Application.Run(new GDChinhGiaoVien());
             /// code của Chiều Chiều
             //Application.Run(new GDChinhGiaoVu());
             //Application.Run(new FrmLOGIN());
+            Application.Run(new Form1());
             //Application.Run(new FrmGiaoVu());
             //Comment ChieuChieu ầgafaffsdfdsf
         }

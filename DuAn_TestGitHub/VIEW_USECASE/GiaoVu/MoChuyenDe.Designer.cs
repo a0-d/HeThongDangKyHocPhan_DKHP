@@ -38,8 +38,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.radGroupBox1 = new System.Windows.Forms.GroupBox();
+            this.SLL = new System.Windows.Forms.NumericUpDown();
             this.label20 = new System.Windows.Forms.Label();
             this.cbbTenBatDau = new System.Windows.Forms.ComboBox();
             this.SLSVTD1N = new System.Windows.Forms.NumericUpDown();
@@ -59,16 +59,11 @@
             this.cbbNamHoc = new System.Windows.Forms.ComboBox();
             this.cbbHocKi = new System.Windows.Forms.ComboBox();
             this.lbNote = new System.Windows.Forms.Label();
-            this.SLTSV = new System.Windows.Forms.NumericUpDown();
-            this.SLL = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SLL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SLSVTD1N)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SLNTD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SLSV1L)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnThemChuyenDe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLTSV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLL)).BeginInit();
             this.SuspendLayout();
             // 
             // tbTenCD
@@ -168,7 +163,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(61, 140);
+            this.label7.Location = new System.Drawing.Point(279, 134);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 20);
             this.label7.TabIndex = 19;
@@ -179,7 +174,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(135, 140);
+            this.label8.Location = new System.Drawing.Point(353, 134);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(25, 20);
             this.label8.TabIndex = 20;
@@ -189,7 +184,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(521, 140);
+            this.label9.Location = new System.Drawing.Point(739, 134);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 20);
             this.label9.TabIndex = 19;
@@ -200,21 +195,11 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(578, 140);
+            this.label10.Location = new System.Drawing.Point(796, 134);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(25, 20);
             this.label10.TabIndex = 20;
             this.label10.Text = "(*)";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(883, 140);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(137, 20);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Số lượng sinh viên";
             // 
             // radGroupBox1
             // 
@@ -238,12 +223,25 @@
             this.radGroupBox1.Controls.Add(this.label6);
             this.radGroupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.radGroupBox1.ForeColor = System.Drawing.Color.Red;
-            //this.radGroupBox1.HeaderText = "Thông tin lớp";
             this.radGroupBox1.Location = new System.Drawing.Point(164, 193);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(980, 229);
             this.radGroupBox1.TabIndex = 23;
+            this.radGroupBox1.TabStop = false;
             this.radGroupBox1.Text = "Thông tin lớp";
+            // 
+            // SLL
+            // 
+            this.SLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.SLL.Location = new System.Drawing.Point(160, 44);
+            this.SLL.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.SLL.Name = "SLL";
+            this.SLL.Size = new System.Drawing.Size(120, 30);
+            this.SLL.TabIndex = 26;
             // 
             // label20
             // 
@@ -423,6 +421,7 @@
             this.btnThemChuyenDe.Size = new System.Drawing.Size(241, 60);
             this.btnThemChuyenDe.TabIndex = 23;
             this.btnThemChuyenDe.Text = "Lưu thay đổi";
+            this.btnThemChuyenDe.UseVisualStyleBackColor = false;
             this.btnThemChuyenDe.Click += new System.EventHandler(this.btnThemChuyenDe_Click_1);
             // 
             // cbbNamHoc
@@ -430,7 +429,7 @@
             this.cbbNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbNamHoc.FormattingEnabled = true;
             this.cbbNamHoc.ItemHeight = 25;
-            this.cbbNamHoc.Location = new System.Drawing.Point(164, 133);
+            this.cbbNamHoc.Location = new System.Drawing.Point(382, 127);
             this.cbbNamHoc.Name = "cbbNamHoc";
             this.cbbNamHoc.Size = new System.Drawing.Size(195, 33);
             this.cbbNamHoc.TabIndex = 24;
@@ -440,9 +439,9 @@
             this.cbbHocKi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbHocKi.FormattingEnabled = true;
             this.cbbHocKi.ItemHeight = 25;
-            this.cbbHocKi.Location = new System.Drawing.Point(607, 133);
+            this.cbbHocKi.Location = new System.Drawing.Point(825, 127);
             this.cbbHocKi.Name = "cbbHocKi";
-            this.cbbHocKi.Size = new System.Drawing.Size(119, 33);
+            this.cbbHocKi.Size = new System.Drawing.Size(207, 33);
             this.cbbHocKi.TabIndex = 24;
             // 
             // lbNote
@@ -455,39 +454,12 @@
             this.lbNote.Size = new System.Drawing.Size(0, 20);
             this.lbNote.TabIndex = 25;
             // 
-            // SLTSV
-            // 
-            this.SLTSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.SLTSV.Location = new System.Drawing.Point(1024, 130);
-            this.SLTSV.Maximum = new decimal(new int[] {
-            9999999,
-            0,
-            0,
-            0});
-            this.SLTSV.Name = "SLTSV";
-            this.SLTSV.Size = new System.Drawing.Size(120, 30);
-            this.SLTSV.TabIndex = 26;
-            // 
-            // SLL
-            // 
-            this.SLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.SLL.Location = new System.Drawing.Point(160, 44);
-            this.SLL.Maximum = new decimal(new int[] {
-            9999999,
-            0,
-            0,
-            0});
-            this.SLL.Name = "SLL";
-            this.SLL.Size = new System.Drawing.Size(120, 30);
-            this.SLL.TabIndex = 26;
-            // 
             // MoChuyenDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1300, 550);
-            this.Controls.Add(this.SLTSV);
             this.Controls.Add(this.lbNote);
             this.Controls.Add(this.cbbHocKi);
             this.Controls.Add(this.cbbNamHoc);
@@ -497,7 +469,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tbThuocNganh);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.tbMaCD);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
@@ -507,15 +478,12 @@
             this.Name = "MoChuyenDe";
             this.Text = "MoChuyenDe";
             this.Load += new System.EventHandler(this.MoChuyenDe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SLL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SLSVTD1N)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SLNTD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SLSV1L)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnThemChuyenDe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLTSV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -532,7 +500,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox radGroupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -554,6 +521,5 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown SLL;
-        private System.Windows.Forms.NumericUpDown SLTSV;
     }
 }

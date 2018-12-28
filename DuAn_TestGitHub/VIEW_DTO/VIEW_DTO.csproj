@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,19 +42,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GiaoVienTT\TaiKhoan.cs" />
     <Compile Include="GiaoVu\BaoGom.cs" />
+    <Compile Include="GiaoVu\ChucVu.cs" />
     <Compile Include="GiaoVu\ChuyenDeDuocMo.cs" />
-    <Compile Include="GiaoVu\Dao_GiaoVu.cs" />
+    <Compile Include="GiaoVu\DangKy.cs" />
     <Compile Include="GiaoVu\GiaoVien.cs" />
     <Compile Include="GiaoVu\HocKy.cs" />
+    <Compile Include="GiaoVu\KhanNang.cs" />
     <Compile Include="GiaoVu\NamHoc.cs" />
     <Compile Include="GiaoVu\Nganh.cs" />
     <Compile Include="GiaoVu\Nhom.cs" />
+    <Compile Include="GiaoVu\SinhVien.cs" />
+    <Compile Include="GiaoVu\SinhVienDayDu.cs" />
+    <Compile Include="GiaoVu\SOLUONGSVTHEOCHUYENDEDUOCMO.cs" />
+    <Compile Include="GiaoVu\TraCuuDiem.cs" />
+    <Compile Include="GiaoVu\TraCuuDiemSV.cs" />
+    <Compile Include="GiaoVu\TraCuuTTDK.cs" />
+    <Compile Include="LOGIN\TaiKhoan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GiaoVu\TatCaChuyenDe.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="GiaoVienTT\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

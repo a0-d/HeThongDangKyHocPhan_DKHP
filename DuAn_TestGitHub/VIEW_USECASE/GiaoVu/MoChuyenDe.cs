@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VIEW_DTO.DaoData;
+using VIEW_BUS.DaoData;
 using VIEW_DTO.TT_TatCaChuyenDe;
 
 namespace VIEW_USECASE.GiaoVu
@@ -80,6 +80,7 @@ namespace VIEW_USECASE.GiaoVu
         }
         private void btnThemChuyenDe_Click_1(object sender, EventArgs e)
         {
+            //var dscddmdektra = Dao_GiaoVu.Ds
             if (Check(cbbNamHoc.Text) == true)
             {
                 if (Check(cbbHocKi.Text) == true)
@@ -101,25 +102,24 @@ namespace VIEW_USECASE.GiaoVu
                                                 lbNote.Text = "Thông báo: Số lượng nhóm và số sinh viên 1 nhóm không đủ cho tất cả sinh viên!";
                                                 return;
                                             }
-                                            if(Int32.Parse(SLL.Text) * Int32.Parse(SLSV1L.Text) != Int32.Parse(SLTSV.Text) && Int32.Parse(SLTSV.Text) != 0)
-                                            {
-                                                lbNote.Text = "Thông báo: Số lượng lớp * số lượng sinh viên 1 lớp khác với tổng sinh viên 1 chuyên đề!";
-                                                return;
-                                            }
+                                            //if(Int32.Parse(SLL.Text) * Int32.Parse(SLSV1L.Text) != Int32.Parse(SLTSV.Text) && Int32.Parse(SLTSV.Text) != 0)
+                                            //{
+                                            //    lbNote.Text = "Thông báo: Số lượng lớp * số lượng sinh viên 1 lớp khác với tổng sinh viên 1 chuyên đề!";
+                                            //    return;
+                                            //}
                                             int sll = Int32.Parse(SLL.Text);
                                             int sln = Int32.Parse(SLNTD.Text);
                                             int tong_sln = sll * sln;
                                             int sl_thanhcong = 0;
                                             int sl_n_thanhcong = 0;
-                                            int tsv = 0;
-                                            if (Int32.Parse(SLTSV.Text) == 0)
-                                            {
-                                                tsv = Int32.Parse(SLL.Text) * Int32.Parse(SLSV1L.Text);
-                                            }
-                                            else
-                                            {
-                                                tsv = Int32.Parse(SLTSV.Text);
-                                            }
+                                            //if (Int32.Parse(SLTSV.Text) == 0)
+                                            //{
+                                            //    tsv = Int32.Parse(SLL.Text) * Int32.Parse(SLSV1L.Text);
+                                            //}
+                                            //else
+                                            //{
+                                            //    tsv = Int32.Parse(SLTSV.Text);
+                                            //}
                                             for (int i=1;i<=sll;i++)
                                             {
                                                 var cddm = new ChuyenDeDuocMo
@@ -128,9 +128,8 @@ namespace VIEW_USECASE.GiaoVu
                                                     MaCD = tbMaCD.Text,
                                                     NamHoc = cbbNamHoc.Text,
                                                     HocKy = Int32.Parse(cbbHocKi.Text),
-                                                    SoSVToiDa = tsv,
-                                                    SoSVToiDa1Lop = Int32.Parse(SLNTD.Text),
-                                                    SoSVDaDK = 0,
+                                                    SoNToiDa1Lop = Int32.Parse(SLNTD.Text),
+                                                    slsv1lop = Int32.Parse(SLSV1L.Text),
                                                     MoDkHP = new DateTime(1900, 01, 01),
                                                     KtDkHP = new DateTime(1900, 01, 01),
                                                     GVPhuTrach = "chưa có"
@@ -145,7 +144,8 @@ namespace VIEW_USECASE.GiaoVu
                                                     {
                                                         malop = cddm.MaLop,
                                                         manhom = cddm.MaLop + "_" + j,
-                                                        sosvddk = 0
+                                                        sosvddk = 0,
+                                                        sosvtoida1nhom = Int32.Parse(SLSVTD1N.Text)
                                                     };
                                                     if(Dao_GiaoVu.MoNhomThuocChuyenDe(nh))
                                                     {
@@ -153,6 +153,8 @@ namespace VIEW_USECASE.GiaoVu
                                                     }
                                                 }
                                             }
+                                            int sltsv = Int32.Parse(SLL.Text) * Int32.Parse(SLSV1L.Text);
+                                            Dao_GiaoVu.CapNhatSLSVTrenSOLUONGSV(tbMaCD.Text, cbbNamHoc.Text, cbbHocKi.Text,sltsv);
                                             MessageBox.Show(string.Format("Đã mở thành công {0}/{1} lớp trong chuyên đề {2} \nMở thành công {3}/{4} nhóm!", sl_thanhcong, sll,tbTenCD.Text,sl_n_thanhcong,tong_sln), "Thông báo");
                                             
                                         }
