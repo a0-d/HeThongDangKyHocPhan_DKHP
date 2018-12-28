@@ -6,19 +6,26 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VIEW_BUS.DAO_GiaoVien.TTGiaoVien;
+using VIEW_DTO.LOGIN;
 
 namespace VIEW_USECASE
 {
     public partial class GDChinhGiaoVien : Form
     {
+        TaiKhoan tk = new TaiKhoan();
+        Thread th;
+
         string IDChuyenDe = "";
 
-        public string IDNguoiDung = "ND07";
-        public GDChinhGiaoVien()
+        public string IDNguoiDung;
+        public GDChinhGiaoVien(TaiKhoan tk1)
         {
+            tk = tk1;
+            IDNguoiDung = tk.tentk;
             InitializeComponent();
             tabcontrolChucNang.SelectedIndex = 0;
             panelQT.Visible = false;
@@ -134,23 +141,35 @@ namespace VIEW_USECASE
 
         private void dataGridViewChuyenDe_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            LoadText();
-            btnCapNhatDead.Enabled = true;
+            int i = LoadText();
+            if (i == 1) return;
             btnThemDead.Enabled = true;
             btnCNSLLop.Enabled = true;
             btnCapNhatSLSV.Enabled = true;
         }
         private void dataGridViewChuyenDeFalse_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            LoadText();
             btnCapNhatDead.Enabled = false;
             btnThemDead.Enabled = false;
             btnCNSLLop.Enabled = false;
             btnCapNhatSLSV.Enabled = false;
         }
-        private void LoadText()
+        private int LoadText()
         {
-            IDChuyenDe = dataGridViewDangDay.CurrentRow.Cells["clMaCD"].Value.ToString();
+            try { IDChuyenDe = dataGridViewDangDay.CurrentRow.Cells["clMaCD"].Value.ToString(); return 0; }
+            catch
+            {
+                DialogResult dlr = MessageBox.Show("Không có chuyên đề nào hiển thị!", "Nhắc nhở!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dlr == DialogResult.OK)
+                {
+                    btnCapNhatDead.Enabled = false;
+                    btnThemDead.Enabled = false;
+                    btnCNSLLop.Enabled = false;
+                    btnCapNhatSLSV.Enabled = false;
+                }
+                return 1;
+            }
+
         }
 
 
@@ -673,8 +692,24 @@ namespace VIEW_USECASE
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn đã đăng xuất!");
-            Close();
+            string thongbao = "Bạn có chắc chắn muốn đăng xuất?";
+            DialogResult rs = MessageBox.Show(thongbao, "Thông báo", MessageBoxButtons.YesNo);
+            if (rs == DialogResult.Yes)
+            {
+                th = new Thread(openFormLogin);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+                this.Close();
+                return;
+            }
+            else
+            {
+
+            }
+        }
+        private void openFormLogin(object sender)
+        {
+            Application.Run(new WindowsFormsApplication1.Form1());
         }
 
         private void btnCapNhatThemDead_Click(object sender, EventArgs e)

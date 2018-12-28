@@ -427,7 +427,6 @@ namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
                 using (SqlCommand cmd = new SqlCommand("proc_gvien20 @macd", sql))
                 {
                     cmd.Parameters.Add(new SqlParameter("@macd", macd));
-
                     temp = (int)cmd.ExecuteScalar();
                 }
 

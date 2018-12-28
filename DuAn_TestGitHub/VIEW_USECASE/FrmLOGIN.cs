@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
         
         private void openFormLoadGiaoVien(object sender)
         {
-            Application.Run(new GDChinhGiaoVien());
+            Application.Run(new GDChinhGiaoVien(tk));
         }
         private void DangNhap()
         {

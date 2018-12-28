@@ -188,6 +188,16 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridViewDangDay = new System.Windows.Forms.DataGridView();
+            this.clMaCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clMaLopCdDangDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNamcddangday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clhockydangday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clSoNhomToiDa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clMOdkhp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDongDkhp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clGVPhuTrach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridViewDangMo = new System.Windows.Forms.DataGridView();
             this.clMaChuyenDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -206,16 +216,6 @@
             this.clTinhTrangTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.clMaCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clMaLopCdDangDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clNamcddangday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clhockydangday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clSoNhomToiDa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clMOdkhp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDongDkhp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clGVPhuTrach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelFunction.SuspendLayout();
             this.tabcontrolChucNang.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -1143,6 +1143,9 @@
             // 
             // dataGridViewTraCuuDiem
             // 
+            this.dataGridViewTraCuuDiem.AllowUserToAddRows = false;
+            this.dataGridViewTraCuuDiem.AllowUserToDeleteRows = false;
+            this.dataGridViewTraCuuDiem.AllowUserToResizeRows = false;
             this.dataGridViewTraCuuDiem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTraCuuDiem.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1468,11 +1471,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(115, 114);
+            this.label10.Location = new System.Drawing.Point(47, 118);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(230, 25);
+            this.label10.Size = new System.Drawing.Size(298, 25);
             this.label10.TabIndex = 0;
-            this.label10.Text = "Số lượng sinh viên tối đa:";
+            this.label10.Text = "Số lượng sinh viên tối đa một lớp:";
             // 
             // label9
             // 
@@ -1798,6 +1801,7 @@
             // 
             this.dgvDSChuyenDeDay.AllowUserToAddRows = false;
             this.dgvDSChuyenDeDay.AllowUserToDeleteRows = false;
+            this.dgvDSChuyenDeDay.AllowUserToResizeRows = false;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DarkCyan;
             this.dgvDSChuyenDeDay.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDSChuyenDeDay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1813,6 +1817,7 @@
             this.dgvDSChuyenDeDay.ColumnHeadersHeight = 12;
             this.dgvDSChuyenDeDay.Location = new System.Drawing.Point(43, 164);
             this.dgvDSChuyenDeDay.Name = "dgvDSChuyenDeDay";
+            this.dgvDSChuyenDeDay.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1932,6 +1937,9 @@
             // 
             // dataGridViewTraCuuTTDK
             // 
+            this.dataGridViewTraCuuTTDK.AllowUserToAddRows = false;
+            this.dataGridViewTraCuuTTDK.AllowUserToDeleteRows = false;
+            this.dataGridViewTraCuuTTDK.AllowUserToResizeRows = false;
             this.dataGridViewTraCuuTTDK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTraCuuTTDK.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2044,6 +2052,7 @@
             // 
             this.dataGridViewDangDay.AllowUserToAddRows = false;
             this.dataGridViewDangDay.AllowUserToDeleteRows = false;
+            this.dataGridViewDangDay.AllowUserToResizeRows = false;
             this.dataGridViewDangDay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDangDay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2082,6 +2091,102 @@
             this.dataGridViewDangDay.TabIndex = 1;
             this.dataGridViewDangDay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewChuyenDe_CellClick);
             // 
+            // clMaCD
+            // 
+            this.clMaCD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clMaCD.DataPropertyName = "MACD";
+            this.clMaCD.FillWeight = 130F;
+            this.clMaCD.Frozen = true;
+            this.clMaCD.HeaderText = "Mã Chuyên Đề";
+            this.clMaCD.Name = "clMaCD";
+            this.clMaCD.ReadOnly = true;
+            this.clMaCD.Width = 186;
+            // 
+            // clMaLopCdDangDay
+            // 
+            this.clMaLopCdDangDay.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clMaLopCdDangDay.DataPropertyName = "MALOP";
+            this.clMaLopCdDangDay.Frozen = true;
+            this.clMaLopCdDangDay.HeaderText = "Mã Lớp";
+            this.clMaLopCdDangDay.Name = "clMaLopCdDangDay";
+            this.clMaLopCdDangDay.ReadOnly = true;
+            this.clMaLopCdDangDay.Width = 143;
+            // 
+            // clNamcddangday
+            // 
+            this.clNamcddangday.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clNamcddangday.DataPropertyName = "NAMHOC";
+            this.clNamcddangday.FillWeight = 80F;
+            this.clNamcddangday.Frozen = true;
+            this.clNamcddangday.HeaderText = "Năm";
+            this.clNamcddangday.Name = "clNamcddangday";
+            this.clNamcddangday.ReadOnly = true;
+            this.clNamcddangday.Width = 115;
+            // 
+            // clhockydangday
+            // 
+            this.clhockydangday.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clhockydangday.DataPropertyName = "HOCKY";
+            this.clhockydangday.FillWeight = 70F;
+            this.clhockydangday.Frozen = true;
+            this.clhockydangday.HeaderText = "Học Kỳ";
+            this.clhockydangday.Name = "clhockydangday";
+            this.clhockydangday.ReadOnly = true;
+            // 
+            // clSoNhomToiDa
+            // 
+            this.clSoNhomToiDa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clSoNhomToiDa.DataPropertyName = "SONTOIDA";
+            this.clSoNhomToiDa.FillWeight = 80F;
+            this.clSoNhomToiDa.Frozen = true;
+            this.clSoNhomToiDa.HeaderText = "Số Nhóm";
+            this.clSoNhomToiDa.Name = "clSoNhomToiDa";
+            this.clSoNhomToiDa.ReadOnly = true;
+            this.clSoNhomToiDa.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "SOSVTOIDA";
+            this.Column4.FillWeight = 130F;
+            this.Column4.HeaderText = "Số Sinh Viên Tối Đa";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // clMOdkhp
+            // 
+            this.clMOdkhp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clMOdkhp.DataPropertyName = "MODKHP";
+            this.clMOdkhp.HeaderText = "Mở Đăng Ký";
+            this.clMOdkhp.Name = "clMOdkhp";
+            this.clMOdkhp.ReadOnly = true;
+            this.clMOdkhp.Width = 143;
+            // 
+            // clDongDkhp
+            // 
+            this.clDongDkhp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clDongDkhp.DataPropertyName = "DONGDKHP";
+            this.clDongDkhp.FillWeight = 200F;
+            this.clDongDkhp.HeaderText = "Đóng Đăng Ký";
+            this.clDongDkhp.Name = "clDongDkhp";
+            this.clDongDkhp.ReadOnly = true;
+            this.clDongDkhp.Width = 170;
+            // 
+            // clGVPhuTrach
+            // 
+            this.clGVPhuTrach.DataPropertyName = "GVPHUTRACH";
+            this.clGVPhuTrach.FillWeight = 80F;
+            this.clGVPhuTrach.HeaderText = "Giáo Viên";
+            this.clGVPhuTrach.Name = "clGVPhuTrach";
+            this.clGVPhuTrach.ReadOnly = true;
+            // 
+            // clTrangThai
+            // 
+            this.clTrangThai.DataPropertyName = "TRANGTHAI";
+            this.clTrangThai.FillWeight = 50F;
+            this.clTrangThai.HeaderText = "Trạng Thái";
+            this.clTrangThai.Name = "clTrangThai";
+            this.clTrangThai.ReadOnly = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGridViewDangMo);
@@ -2097,6 +2202,7 @@
             // 
             this.dataGridViewDangMo.AllowUserToAddRows = false;
             this.dataGridViewDangMo.AllowUserToDeleteRows = false;
+            this.dataGridViewDangMo.AllowUserToResizeRows = false;
             this.dataGridViewDangMo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDangMo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2174,6 +2280,7 @@
             // 
             this.dataGridViewCDAll.AllowUserToAddRows = false;
             this.dataGridViewCDAll.AllowUserToDeleteRows = false;
+            this.dataGridViewCDAll.AllowUserToResizeRows = false;
             this.dataGridViewCDAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCDAll.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -2323,102 +2430,6 @@
             this.txtSearch.Size = new System.Drawing.Size(448, 30);
             this.txtSearch.TabIndex = 1;
             // 
-            // clMaCD
-            // 
-            this.clMaCD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clMaCD.DataPropertyName = "MACD";
-            this.clMaCD.FillWeight = 130F;
-            this.clMaCD.Frozen = true;
-            this.clMaCD.HeaderText = "Mã Chuyên Đề";
-            this.clMaCD.Name = "clMaCD";
-            this.clMaCD.ReadOnly = true;
-            this.clMaCD.Width = 186;
-            // 
-            // clMaLopCdDangDay
-            // 
-            this.clMaLopCdDangDay.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clMaLopCdDangDay.DataPropertyName = "MALOP";
-            this.clMaLopCdDangDay.Frozen = true;
-            this.clMaLopCdDangDay.HeaderText = "Mã Lớp";
-            this.clMaLopCdDangDay.Name = "clMaLopCdDangDay";
-            this.clMaLopCdDangDay.ReadOnly = true;
-            this.clMaLopCdDangDay.Width = 143;
-            // 
-            // clNamcddangday
-            // 
-            this.clNamcddangday.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clNamcddangday.DataPropertyName = "NAMHOC";
-            this.clNamcddangday.FillWeight = 80F;
-            this.clNamcddangday.Frozen = true;
-            this.clNamcddangday.HeaderText = "Năm";
-            this.clNamcddangday.Name = "clNamcddangday";
-            this.clNamcddangday.ReadOnly = true;
-            this.clNamcddangday.Width = 115;
-            // 
-            // clhockydangday
-            // 
-            this.clhockydangday.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clhockydangday.DataPropertyName = "HOCKY";
-            this.clhockydangday.FillWeight = 70F;
-            this.clhockydangday.Frozen = true;
-            this.clhockydangday.HeaderText = "Học Kỳ";
-            this.clhockydangday.Name = "clhockydangday";
-            this.clhockydangday.ReadOnly = true;
-            // 
-            // clSoNhomToiDa
-            // 
-            this.clSoNhomToiDa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clSoNhomToiDa.DataPropertyName = "SONTOIDA";
-            this.clSoNhomToiDa.FillWeight = 80F;
-            this.clSoNhomToiDa.Frozen = true;
-            this.clSoNhomToiDa.HeaderText = "Số Nhóm";
-            this.clSoNhomToiDa.Name = "clSoNhomToiDa";
-            this.clSoNhomToiDa.ReadOnly = true;
-            this.clSoNhomToiDa.Width = 80;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "SOSVTOIDA";
-            this.Column4.FillWeight = 130F;
-            this.Column4.HeaderText = "Số Sinh Viên Tối Đa";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // clMOdkhp
-            // 
-            this.clMOdkhp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clMOdkhp.DataPropertyName = "MODKHP";
-            this.clMOdkhp.HeaderText = "Mở Đăng Ký";
-            this.clMOdkhp.Name = "clMOdkhp";
-            this.clMOdkhp.ReadOnly = true;
-            this.clMOdkhp.Width = 143;
-            // 
-            // clDongDkhp
-            // 
-            this.clDongDkhp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clDongDkhp.DataPropertyName = "DONGDKHP";
-            this.clDongDkhp.FillWeight = 200F;
-            this.clDongDkhp.HeaderText = "Đóng Đăng Ký";
-            this.clDongDkhp.Name = "clDongDkhp";
-            this.clDongDkhp.ReadOnly = true;
-            this.clDongDkhp.Width = 170;
-            // 
-            // clGVPhuTrach
-            // 
-            this.clGVPhuTrach.DataPropertyName = "GVPHUTRACH";
-            this.clGVPhuTrach.FillWeight = 80F;
-            this.clGVPhuTrach.HeaderText = "Giáo Viên";
-            this.clGVPhuTrach.Name = "clGVPhuTrach";
-            this.clGVPhuTrach.ReadOnly = true;
-            // 
-            // clTrangThai
-            // 
-            this.clTrangThai.DataPropertyName = "TRANGTHAI";
-            this.clTrangThai.FillWeight = 50F;
-            this.clTrangThai.HeaderText = "Trạng Thái";
-            this.clTrangThai.Name = "clTrangThai";
-            this.clTrangThai.ReadOnly = true;
-            // 
             // GDChinhGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2426,14 +2437,14 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1325, 733);
             this.Controls.Add(this.panelChinh);
-            this.Controls.Add(this.panelQT);
-            this.Controls.Add(this.panel_CapNhatSLLop);
-            this.Controls.Add(this.panel_CapNhatSLSV_N);
-            this.Controls.Add(this.panel_CapNhatDead);
-            this.Controls.Add(this.panelThemDead);
             this.Controls.Add(this.panel_KhaNang);
             this.Controls.Add(this.panel_TraCuuDiem);
             this.Controls.Add(this.panelTraCuuTTDK);
+            this.Controls.Add(this.panel_CapNhatSLSV_N);
+            this.Controls.Add(this.panel_CapNhatSLLop);
+            this.Controls.Add(this.panelQT);
+            this.Controls.Add(this.panel_CapNhatDead);
+            this.Controls.Add(this.panelThemDead);
             this.Controls.Add(this.panelFunction);
             this.KeyPreview = true;
             this.Name = "GDChinhGiaoVien";
