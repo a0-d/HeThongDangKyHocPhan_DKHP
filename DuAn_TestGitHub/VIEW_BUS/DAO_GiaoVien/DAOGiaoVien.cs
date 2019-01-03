@@ -3,11 +3,11 @@ using System.Data;
 using System.Data.SqlClient;
 
 
-namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
+namespace VIEW_BUS.DAO_GiaoVien.DAOGiaoVien
 {
     
-    public class TTGiaoVien
-        {
+    public class DAOGiaoVien
+   {
             public string MaNguoiDung;
             public int ExcuteNonQuery(CommandType cmdType, string strSql, params SqlParameter[] parameters)
             {
@@ -658,14 +658,13 @@ namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
 
                 cm.ExecuteNonQuery();
             }
-            public void UpdateMatKhau(string mand, string pass, string passcu)
+            public void UpdateMatKhau(string mand, string pass)
             {
                 SqlConnection sql = Provider.ConnectDatabase();
-                string strSQL = "proc_gvien32 @mand, @pass, @passcu";
+                string strSQL = "proc_gvien32 @mand, @pass";
                 SqlCommand cm = new SqlCommand(strSQL, sql);
                 cm.Parameters.Add(new SqlParameter("@mand", mand));
                 cm.Parameters.Add(new SqlParameter("@pass", pass));
-                cm.Parameters.Add(new SqlParameter("@passcu", passcu));
 
 
 
@@ -695,4 +694,3 @@ namespace VIEW_BUS.DAO_GiaoVien.TTGiaoVien
             }
         }
     }
-

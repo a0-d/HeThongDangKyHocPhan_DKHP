@@ -5,12 +5,14 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VIEW_BUS.DAO_GiaoVien.TTGiaoVien;
+using VIEW_BUS;
 using VIEW_DTO.LOGIN;
+
 
 namespace VIEW_USECASE
 {
@@ -44,12 +46,23 @@ namespace VIEW_USECASE
             panelChinh.Visible = true;
 
         }
-
+        public static string ToMD5(string str)
+        {
+            string result = "";
+            byte[] buffer = Encoding.UTF8.GetBytes(str);
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            buffer = md5.ComputeHash(buffer);
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                result += buffer[i].ToString();
+            }
+            return result;
+        }
         private void GDChinhGiaoVien_Load(object sender, EventArgs e)
         {
 
 
-            TTGiaoVien chuyende = new TTGiaoVien();
+            BUSGiaoVien chuyende = new BUSGiaoVien();
             DataTable dt = chuyende.LayDSChuyeDeDuocMo();
             DataTable dt1 = chuyende.LayDSChuyeDe();
             DataTable dt2 = chuyende.LayDSChuyeDeDangDay(IDNguoiDung);
@@ -126,7 +139,7 @@ namespace VIEW_USECASE
                 panelTraCuuTTDK.Visible = false;
 
                 tb_QT_TenTK.Text = IDNguoiDung;
-                TTGiaoVien info = new TTGiaoVien();
+                BUSGiaoVien info = new BUSGiaoVien();
                 tb_QT_TenChuTK.Text = info.TenNguoiDungtxt(IDNguoiDung);
                 tb_QT_Email.Text = info.MailNguoiDungtxt(IDNguoiDung);
                 tb_QT_ThuocNganh.Text = info.NganhNguoiDungtxt(IDNguoiDung);
@@ -187,10 +200,10 @@ namespace VIEW_USECASE
         private int checkmk()
         {
             int kq = 0;
-            TTGiaoVien mk = new TTGiaoVien();
+            BUSGiaoVien mk = new BUSGiaoVien();
             string mktemp = mk.LayMatKhau(IDNguoiDung);
             mktemp = mktemp.Replace(" ", "");
-            if (mktemp == tb_QT_MKC.Text)
+            if (mktemp == ToMD5(tb_QT_MKC.Text))
             {
                 kq = 1;
             }
@@ -199,7 +212,7 @@ namespace VIEW_USECASE
         //Load Combobox
         private void ComboxLop_Load(object sender, EventArgs e)
         {
-            TTGiaoVien orders = new TTGiaoVien();
+            BUSGiaoVien orders = new BUSGiaoVien();
             DataTable dt = orders.LopCombobox(IDChuyenDe, IDNguoiDung);
 
             dt.Columns.Add("malop", typeof(string));
@@ -213,7 +226,7 @@ namespace VIEW_USECASE
 
         private void ComboxDead_Load(object sender, EventArgs e)
         {
-            TTGiaoVien a = new TTGiaoVien();
+            BUSGiaoVien a = new BUSGiaoVien();
             DataTable dt = a.DeadCombobox(cbLopCapNhatDead.Text, IDNguoiDung);
 
             dt.Columns.Add("madead", typeof(string));
@@ -224,7 +237,7 @@ namespace VIEW_USECASE
         }
         private void ComboxNam_Load(object sender, EventArgs e)
         {
-            TTGiaoVien a = new TTGiaoVien();
+            BUSGiaoVien a = new BUSGiaoVien();
             DataTable dt = a.NamCombobox();
 
             dt.Columns.Add("namhoc", typeof(string));
@@ -235,7 +248,7 @@ namespace VIEW_USECASE
         }
         private void ComboxMaCD_Load(object sender, EventArgs e)
         {
-            TTGiaoVien a = new TTGiaoVien();
+            BUSGiaoVien a = new BUSGiaoVien();
             DataTable dt = a.MaCDDayCombobox();
 
             dt.Columns.Add("macd", typeof(string));
@@ -248,7 +261,7 @@ namespace VIEW_USECASE
         }
         private void ComboxTenCDCoSan_Load(object sender, EventArgs e)
         {
-            TTGiaoVien a = new TTGiaoVien();
+            BUSGiaoVien a = new BUSGiaoVien();
             DataTable dt = a.TenCDCombobox();
 
             dt.Columns.Add("tencd", typeof(string));
@@ -262,7 +275,7 @@ namespace VIEW_USECASE
         //Load txt theo dữ liệu chọn
         private void AddItems_Load(object sender, EventArgs e)
         {
-            TTGiaoVien ten = new TTGiaoVien();
+            BUSGiaoVien ten = new BUSGiaoVien();
             txtTenCDCNSV.Text = ten.TenCDtxt(IDChuyenDe);
             txtTenCD.Text = ten.TenCDtxt(IDChuyenDe);
             txtSLSVCNLop.Text = ten.SoLuongLop(IDChuyenDe, IDNguoiDung).ToString();
@@ -271,17 +284,17 @@ namespace VIEW_USECASE
         }
         private void cbxMaChuyenDeTTDK_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TTGiaoVien ten = new TTGiaoVien();
+            BUSGiaoVien ten = new BUSGiaoVien();
             txtTenChuyenDeTTDK.Text = ten.TenCDtxt(cbxMaChuyenDeTTDK.Text);
         }
         private void cbxMaCDDiem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TTGiaoVien ten = new TTGiaoVien();
+            BUSGiaoVien ten = new BUSGiaoVien();
             txtTenCDDiem.Text = ten.TenCDtxt(cbxMaCDDiem.Text);
         }
         private void txtMaSV_TextChanged(object sender, EventArgs e)
         {
-            TTGiaoVien ten = new TTGiaoVien();
+            BUSGiaoVien ten = new BUSGiaoVien();
             txtTenSinhVien.Text = ten.TenSinhVien(txtMaSV.Text);
         }
 
@@ -384,10 +397,11 @@ namespace VIEW_USECASE
                 {
                     if (checkmk() == 1)
                     {
+                        BUSGiaoVien updatemk = new BUSGiaoVien();
 
-                        TTGiaoVien updatemk = new TTGiaoVien();
-                        updatemk.UpdateMatKhau(IDNguoiDung, tb_QT_MKM.Text, tb_QT_MKC.Text);
-                        MessageBox.Show("Đã Cập Nhật Mật Khẩu thành công!");
+                        string mkmoi = ToMD5(tb_QT_XNMKM.Text).ToString();
+                        updatemk.UpdateMatKhau(IDNguoiDung, mkmoi);
+                        MessageBox.Show("Đã cập nhật mật khẩu thành công!");
                         tb_QT_MKM.ResetText();
                         tb_QT_MKC.ResetText();
                         tb_QT_XNMKM.ResetText();
@@ -421,13 +435,13 @@ namespace VIEW_USECASE
             panelChinh.Visible = false;
             if (txtMaSV.Text == "")
             {
-                TTGiaoVien kq = new TTGiaoVien();
+                BUSGiaoVien kq = new BUSGiaoVien();
                 DataTable dt = kq.LayKetQuaDiemKoSV(cbxMaCDDiem.Text);
                 dataGridViewTraCuuDiem.DataSource = dt;
             }
             else
             {
-                TTGiaoVien kq = new TTGiaoVien();
+                BUSGiaoVien kq = new BUSGiaoVien();
                 DataTable dt = kq.LayKetQuaDiem(txtMaSV.Text, cbxMaCDDiem.Text);
                 dataGridViewTraCuuDiem.DataSource = dt;
             }
@@ -457,7 +471,7 @@ namespace VIEW_USECASE
                 return;
             }
 
-            TTGiaoVien tt = new TTGiaoVien();
+            BUSGiaoVien tt = new BUSGiaoVien();
             DataTable dt = tt.LayThongTinDangKy(cbxMaChuyenDeTTDK.Text, cbxNamHocTTDK.Text, Convert.ToInt32(cbxHocKiTTDK.Text), IDNguoiDung);
 
 
@@ -547,7 +561,7 @@ namespace VIEW_USECASE
             else
             {
 
-                TTGiaoVien update = new TTGiaoVien();
+                BUSGiaoVien update = new BUSGiaoVien();
                 update.UpdateThongTinNguoiDung(IDNguoiDung, tb_QT_TenChuTK.Text, tb_QT_Email.Text, dateTimePickerNgCT.Value);
                 MessageBox.Show("Đã Cập Nhật Thông Tin Thành công!");
             }
@@ -727,7 +741,7 @@ namespace VIEW_USECASE
             }
             else
             {
-                TTGiaoVien addDead = new TTGiaoVien();
+                BUSGiaoVien addDead = new BUSGiaoVien();
                 addDead.InsertDead(malop, id, tendead, thoihanThemDead);
                 MessageBox.Show("Đã Thêm Deadline thành công!");
             }
@@ -750,7 +764,7 @@ namespace VIEW_USECASE
             }
             else
             {
-                TTGiaoVien addDead = new TTGiaoVien();
+                BUSGiaoVien addDead = new BUSGiaoVien();
                 addDead.UpdateDead(id, tendead, thoihanThemDead, cbLopCapNhatDead.Text);
                 MessageBox.Show("Đã Cập Nhật Deadline thành công!");
             }
@@ -766,7 +780,7 @@ namespace VIEW_USECASE
             else
             {
 
-                TTGiaoVien update = new TTGiaoVien();
+                BUSGiaoVien update = new BUSGiaoVien();
                 update.UpdateNhomVsSV(IDChuyenDe, Convert.ToInt32(txtSinhVienCN.Text), Convert.ToInt32(txtNhomCapNhat.Text), IDNguoiDung);
                 MessageBox.Show("Đã Cập Nhật Thông Tin Thành công!");
             }
@@ -777,7 +791,7 @@ namespace VIEW_USECASE
 
         private void btnCapNhatLH_Click(object sender, EventArgs e)
         {
-            TTGiaoVien a = new TTGiaoVien();
+            BUSGiaoVien a = new BUSGiaoVien();
 
             int solopcu = a.SoLuongLopDayDu(IDChuyenDe);
             string tenlop = a.LayTenLop(IDChuyenDe, solopcu);
@@ -837,7 +851,7 @@ namespace VIEW_USECASE
             {
 
 
-                TTGiaoVien khanang = new TTGiaoVien();
+                BUSGiaoVien khanang = new BUSGiaoVien();
                 int temp = khanang.CheckKhaNang(IDNguoiDung, cbxTenCD.Text);
                 if (khanang.CheckKhaNang(IDNguoiDung, cbxTenCD.Text) == 1)
                 {
@@ -858,7 +872,7 @@ namespace VIEW_USECASE
         {
             panelSearch.Visible = true;
             tabControl1.Visible = false;
-            TTGiaoVien tt = new TTGiaoVien();
+            BUSGiaoVien tt = new BUSGiaoVien();
             DataTable dt = tt.LayThongTinTimKiem(txtSearch.Text);
 
 
@@ -871,7 +885,7 @@ namespace VIEW_USECASE
 
         private void cbMaDead_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TTGiaoVien ma = new TTGiaoVien();
+            BUSGiaoVien ma = new BUSGiaoVien();
             txtTenDead.Text = ma.LayTenDead(cbMaDead.Text, cbLopCapNhatDead.Text);
             dtThoiHanCapNhat.Value = ma.LayThoiHanDead(cbMaDead.Text, cbLopCapNhatDead.Text);
         }
@@ -885,7 +899,7 @@ namespace VIEW_USECASE
             else
             {
 
-                TTGiaoVien khanang = new TTGiaoVien();
+                BUSGiaoVien khanang = new BUSGiaoVien();
                 int temp = khanang.CheckKhaNangXoa(IDNguoiDung, cbxTenCD.Text);
                 if (khanang.CheckKhaNangXoa(IDNguoiDung, cbxTenCD.Text) == 1)
                 {
@@ -909,7 +923,7 @@ namespace VIEW_USECASE
 
         private void cbChonLopThemDead_TextChanged(object sender, EventArgs e)
         {
-            TTGiaoVien max = new TTGiaoVien();
+            BUSGiaoVien max = new BUSGiaoVien();
             int x = max.GetMaxIDDEAD(cbChonLopThemDead.Text);
             x++;
             txtMaDeadThem.Text = Convert.ToString(x);
@@ -919,7 +933,7 @@ namespace VIEW_USECASE
         private void cbLopCapNhatDead_TextChanged(object sender, EventArgs e)
         {
             cbMaDead.Text = "1";
-            TTGiaoVien ma = new TTGiaoVien();
+            BUSGiaoVien ma = new BUSGiaoVien();
             txtTenDead.Text = ma.LayTenDead("1", cbLopCapNhatDead.Text);
             dtThoiHanCapNhat.Value = ma.LayThoiHanDead("1", cbLopCapNhatDead.Text);
         }
